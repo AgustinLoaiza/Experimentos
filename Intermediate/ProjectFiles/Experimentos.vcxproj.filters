@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Experimentos.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{D8BE8575-E974-4233-B512-B8F8E258A5E2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Experimentos.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ExperimentosEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{ABA8C7DD-411B-4CE5-B50B-830ADB134F1E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Experimentos">
+      <UniqueIdentifier>{2473E1A9-50C9-4CAA-BFC6-A238816B372C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Experimentos\Experimentos.Build.cs">
+      <Filter>Source\Experimentos</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Experimentos\Experimentos.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\Experimentos.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\ExperimentosGameMode.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\ExperimentosGameMode.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\ExperimentosPawn.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\ExperimentosPawn.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\ExperimentosProjectile.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\ExperimentosProjectile.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\PlanosDeAsedio.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\PlanosDeAsedio.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
