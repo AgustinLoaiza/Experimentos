@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeSurtidor() {}
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_ASurtidor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Experimentos();
+	EXPERIMENTOS_API UClass* Z_Construct_UClass_UObrero_NoRegister();
 // End Cross Module References
 	void ASurtidor::StaticRegisterNativesASurtidor()
 	{
@@ -31,6 +32,7 @@ void EmptyLinkFunctionForGeneratedCodeSurtidor() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +46,9 @@ void EmptyLinkFunctionForGeneratedCodeSurtidor() {}
 		{ "ModuleRelativePath", "Surtidor.h" },
 	};
 #endif
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ASurtidor_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UObrero_NoRegister, (int32)VTABLE_OFFSET(ASurtidor, IObrero), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASurtidor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASurtidor>::IsAbstract,
 	};
@@ -54,11 +59,11 @@ void EmptyLinkFunctionForGeneratedCodeSurtidor() {}
 		DependentSingletons,
 		nullptr,
 		nullptr,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ASurtidor_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ASurtidor_Statics::Class_MetaDataParams))
 	};
@@ -71,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeSurtidor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASurtidor, 2824026927);
+	IMPLEMENT_CLASS(ASurtidor, 3682954507);
 	template<> EXPERIMENTOS_API UClass* StaticClass<ASurtidor>()
 	{
 		return ASurtidor::StaticClass();

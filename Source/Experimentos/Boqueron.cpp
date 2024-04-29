@@ -9,6 +9,9 @@ ABoqueron::ABoqueron()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	MeshBoqueron = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Gasolinera"));
+	MeshBoqueron->SetupAttachment(RootComponent);
+	RootComponent = MeshBoqueron;
 }
 
 // Called when the game starts or when spawned

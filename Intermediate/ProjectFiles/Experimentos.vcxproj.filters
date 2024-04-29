@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Experimentos.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B76A68CC-3FF0-408D-9BEC-2B909BBE6208}</UniqueIdentifier>
+      <UniqueIdentifier>{177F516A-A0FF-4FFC-9B6A-71AB86B912AA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Experimentos.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{1669EC8D-D050-4232-9122-DFADBB470417}</UniqueIdentifier>
+      <UniqueIdentifier>{BD877940-B038-4279-93F0-0494B56271AF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Experimentos">
-      <UniqueIdentifier>{8AB622DE-B672-4906-AD3C-FCB32423FDF6}</UniqueIdentifier>
+      <UniqueIdentifier>{EE891B68-55D1-4058-9236-071141D82880}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Experimentos\Boqueron.cpp">
       <Filter>Source\Experimentos</Filter>
@@ -65,6 +65,30 @@
       <Filter>Source\Experimentos</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Experimentos\ExperimentosProjectile.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\Gasolinera.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\Gasolinera.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\HansKundt.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\HansKundt.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\Mecanico.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\Mecanico.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\Motor.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\Motor.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Experimentos\Obrero.cpp">

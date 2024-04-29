@@ -13,6 +13,17 @@ class AExperimentosGameMode : public AGameModeBase
 
 public:
 	AExperimentosGameMode();
+
+private:
+
+	class ASurtidor* Surtidor;
+	class AHansKundt* HansKundt;
+
+protected:
+	virtual void BeginPlay() override;
+
+private:
+	virtual void Tick(float DeltaTime) override;
 };
 
 
