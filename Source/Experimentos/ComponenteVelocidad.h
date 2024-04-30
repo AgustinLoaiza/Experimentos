@@ -16,6 +16,12 @@ public:
 	// Sets default values for this component's properties
 	UComponenteVelocidad();
 
+	UPROPERTY()
+	float Velocidad;
+	UPROPERTY() 
+	float TiempoTranscurrido; 
+
+	bool verificar = false; 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -23,6 +29,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
+	void MejorarVelocidad(float DeltaTime);
+	void ActivarVelocidad();
 		
 };

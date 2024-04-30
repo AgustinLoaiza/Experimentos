@@ -11,6 +11,8 @@ UComponenteVelocidad::UComponenteVelocidad()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
+	Velocidad = 1500.0f;
+	TiempoTranscurrido = 0;
 }
 
 
@@ -23,6 +25,22 @@ void UComponenteVelocidad::BeginPlay()
 	
 }
 
+void UComponenteVelocidad::MejorarVelocidad(float DeltaTime)
+{
+	if (verificar)
+	{
+		Velocidad += 100.0f * DeltaTime;
+
+
+		verificar = false;
+
+	}
+}
+
+void UComponenteVelocidad::ActivarVelocidad()
+{
+	verificar = true;
+}
 
 // Called every frame
 void UComponenteVelocidad::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -30,5 +48,6 @@ void UComponenteVelocidad::TickComponent(float DeltaTime, ELevelTick TickType, F
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+	MejorarVelocidad(DeltaTime);
 }
 

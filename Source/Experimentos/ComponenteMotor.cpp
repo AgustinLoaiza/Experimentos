@@ -11,8 +11,7 @@ UComponenteMotor::UComponenteMotor()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// ...
-	Velocidad = 1500.0f;
-	TiempoTranscurrido = 0;
+	
 }
 
 
@@ -25,39 +24,13 @@ void UComponenteMotor::BeginPlay()
 	
 }
 
-void UComponenteMotor::MostrarMovimiento(float DeltaTime)
-{
-	if (verificar)
-	{
-		TiempoTranscurrido++;
-		if (TiempoTranscurrido < 300)
-		{
-			AActor* Parent = GetOwner();
-			if (Parent)
-			{
-				auto NewPos = Parent->GetActorLocation() + FVector(FMath::RandRange(-100.0f, 100.0f) + Velocidad * DeltaTime, FMath::RandRange(-100.0f, 100.0f) + Velocidad * DeltaTime, 0.0f);
-				Parent->SetActorLocation(NewPos);
-			}
-		}
-		else
-		{
-			verificar = false;
-		}
-	}
-}
-
-void UComponenteMotor::ActivarMovimiento()
-{
-	verificar = true;
-}
-
 // Called every frame
 void UComponenteMotor::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
-	MostrarMovimiento(DeltaTime); 
+	
 }
 
 
