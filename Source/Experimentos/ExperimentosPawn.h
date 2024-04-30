@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "ComponenteMotor.h"
+#include "Motor.h"
+#include "ComponenteVelocidad.h"
 #include "ExperimentosPawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -74,5 +77,17 @@ public:
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+public:
+	UPROPERTY()
+	UComponenteMotor* Motor;
+	UFUNCTION()
+	void DropItem();
+	UFUNCTION()
+	void TakeItem(AMotor* InventoryItem);
+	UFUNCTION()
+	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
+
+	UComponenteVelocidad* Velocidad;
 };
 

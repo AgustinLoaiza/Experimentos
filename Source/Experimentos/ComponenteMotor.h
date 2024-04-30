@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Motor.h" 
 #include "ComponenteMotor.generated.h"
 
 
@@ -15,6 +16,13 @@ class EXPERIMENTOS_API UComponenteMotor : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UComponenteMotor();
+
+	UPROPERTY()
+	TArray<AMotor*> CurrentInventory;
+	UFUNCTION()
+	int32 AddToInventory(AMotor* ActorToAdd);
+	UFUNCTION()
+	void RemoveFromInventory(AMotor* ActorToRemove);
 
 protected:
 	// Called when the game starts

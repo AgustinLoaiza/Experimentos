@@ -14,6 +14,16 @@ UComponenteMotor::UComponenteMotor()
 	
 }
 
+int32 UComponenteMotor::AddToInventory(AMotor* ActorToAdd)
+{
+	return CurrentInventory.Add(ActorToAdd); 
+}
+
+void UComponenteMotor::RemoveFromInventory(AMotor* ActorToRemove)
+{
+	CurrentInventory.Remove(ActorToRemove);
+}
+
 
 // Called when the game starts
 void UComponenteMotor::BeginPlay()

@@ -31,6 +31,15 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Velocidad_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Velocidad;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TiempoTranscurrido_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TiempoTranscurrido;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +55,22 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 		{ "ModuleRelativePath", "ComponenteVelocidad.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_Velocidad_MetaData[] = {
+		{ "ModuleRelativePath", "ComponenteVelocidad.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_Velocidad = { "Velocidad", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UComponenteVelocidad, Velocidad), METADATA_PARAMS(Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_Velocidad_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_Velocidad_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_TiempoTranscurrido_MetaData[] = {
+		{ "ModuleRelativePath", "ComponenteVelocidad.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_TiempoTranscurrido = { "TiempoTranscurrido", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UComponenteVelocidad, TiempoTranscurrido), METADATA_PARAMS(Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_TiempoTranscurrido_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_TiempoTranscurrido_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UComponenteVelocidad_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_Velocidad,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_TiempoTranscurrido,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UComponenteVelocidad_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UComponenteVelocidad>::IsAbstract,
 	};
@@ -55,11 +80,11 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_UComponenteVelocidad_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UComponenteVelocidad_Statics::PropPointers),
 		0,
 		0x00B000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UComponenteVelocidad_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UComponenteVelocidad_Statics::Class_MetaDataParams))
@@ -73,7 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UComponenteVelocidad, 423023269);
+	IMPLEMENT_CLASS(UComponenteVelocidad, 2811409622);
 	template<> EXPERIMENTOS_API UClass* StaticClass<UComponenteVelocidad>()
 	{
 		return UComponenteVelocidad::StaticClass();

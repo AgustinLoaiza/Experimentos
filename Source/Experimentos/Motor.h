@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Engine/StaticMeshActor.h"
 #include "TimerManager.h"
+#include "ComponenteVelocidad.h"
 #include "Motor.generated.h"
 
 /**
@@ -31,4 +32,5 @@ public:
 	UPROPERTY()
 	bool Verificar = 0;
 	
+	UComponenteVelocidad* Velocidad;
 };

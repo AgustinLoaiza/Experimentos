@@ -50,6 +50,10 @@ AExperimentosPawn::AExperimentosPawn()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
+
+	Motor= CreateDefaultSubobject<UComponenteMotor>("Motor");
+
+	Velocidad = CreateDefaultSubobject<UComponenteVelocidad>(TEXT("ComponenteVelocidad"));
 }
 
 void AExperimentosPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -135,5 +139,36 @@ void AExperimentosPawn::FireShot(FVector FireDirection)
 void AExperimentosPawn::ShotTimerExpired()
 {
 	bCanFire = true;
+}
+
+void AExperimentosPawn::DropItem()
+{
+	if (Motor->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AMotor* Item = Motor->CurrentInventory.Last();
+	Motor->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->PutDown(PutDownLocation);
+}
+
+void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+	AMotor* InventoryItem = Cast<AMotor>(Other);
+	if (InventoryItem != nullptr)
+	{
+		TakeItem(InventoryItem);
+	}
+}
+
+void AExperimentosPawn::TakeItem(AMotor* InventoryItem)
+{
+	Velocidad->ActivarVelocidad();
+	InventoryItem->PickUp();
+	Motor->AddToInventory(InventoryItem);
 }
 
