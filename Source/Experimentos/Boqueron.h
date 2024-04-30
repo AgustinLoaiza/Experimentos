@@ -18,13 +18,15 @@ public:
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	FString Gasolinera;
-	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	FString Motor;
+	FString PowerUp;
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
 	UStaticMeshComponent* MeshBoqueron;
+
+	FVector UbicacionBoqueron;
+
+	float TiempoTranscurrido = 0.0f;
 
 protected:
 	// Called when the game starts or when spawned
@@ -34,9 +36,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void SetGasolinera(FString _Gasolinera);
 	void SetMesh(UStaticMeshComponent* _MeshBoqueron);
-	void SetMotor(FString _Motor);
+	void SetPowerUp(FString _PowerUp);
+	void BuildPowerUp();
 
 	void Caracteristicas();
 

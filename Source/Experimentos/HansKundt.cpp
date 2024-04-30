@@ -55,8 +55,7 @@ void AHansKundt::ConstruirBoqueron(FVector UbicacionBoqueron)
 	}
 
 	Obrero->BuildBoqueron(UbicacionBoqueron);
-	Obrero->BuildGasolinera(); 
 	Obrero->BuildMesh(); 
-	//Obrero->BuildMotor(); 
+	Obrero->BuildPowerUps();
 }
 

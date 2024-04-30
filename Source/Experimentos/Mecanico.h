@@ -25,10 +25,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	virtual void BuildBoqueron(FVector UbicacionBoqueron) override;
-	virtual void BuildMotor() override;
 	virtual void BuildMesh() override;
+	virtual void BuildPowerUps() override;
 	class UStaticMesh* Motor = LoadObject<UStaticMesh>(nullptr, TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Torus.Shape_Torus'"));
-	virtual void BuildGasolinera() override;
 	virtual class ABoqueron* GetBoqueron() override;
 	ABoqueron* Boqueron;
 

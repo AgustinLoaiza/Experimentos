@@ -52,8 +52,6 @@ AExperimentosPawn::AExperimentosPawn()
 	bCanFire = true;
 
 	Motor= CreateDefaultSubobject<UComponenteMotor>("Motor");
-
-	Velocidad = CreateDefaultSubobject<UComponenteVelocidad>(TEXT("ComponenteVelocidad"));
 }
 
 void AExperimentosPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -162,12 +160,12 @@ void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Oth
 	if (InventoryItem != nullptr)
 	{
 		TakeItem(InventoryItem);
+		MoveSpeed = 2500.0f;
 	}
 }
 
 void AExperimentosPawn::TakeItem(AMotor* InventoryItem)
 {
-	Velocidad->ActivarVelocidad();
 	InventoryItem->PickUp();
 	Motor->AddToInventory(InventoryItem);
 }

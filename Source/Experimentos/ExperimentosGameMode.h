@@ -17,6 +17,7 @@ public:
 private:
 
 	class ASurtidor* Surtidor;
+	class AMecanico* Mecanico;
 	class AHansKundt* HansKundt;
 
 protected:

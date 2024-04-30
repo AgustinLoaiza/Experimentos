@@ -34,27 +34,16 @@ void ASurtidor::BuildBoqueron(FVector UbicacionBoqueron)
 	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Estancia():Lodging is NULL, make sure it's initialized.")); return; }
 }
 
-void ASurtidor::BuildMotor()
-{
-}
-
 void ASurtidor::BuildMesh()
 {
 	Boqueron->MeshBoqueron->SetStaticMesh(Gasolinera); 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void ASurtidor::BuildGasolinera()
+void ASurtidor::BuildPowerUps()
 {
 	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Surtidor")); return; }
-	Boqueron->SetGasolinera("Gasolinera");
-	UWorld* const World = GetWorld();
-	if (World != nullptr)
-	{
-		FVector ubicacionGasolinera = FVector(-1100.0f, 1300.0f, 215.0f) - FVector(100.0f, 0.0f, 0.0f);
-		World->SpawnActor<AGasolinera>(ubicacionGasolinera, FRotator::ZeroRotator);
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Gasolinera"));
-	}
+	Boqueron->SetPowerUp("Gasolinera");
 }
 
 ABoqueron* ASurtidor::GetBoqueron()

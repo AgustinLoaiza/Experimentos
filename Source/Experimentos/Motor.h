@@ -32,5 +32,5 @@ public:
 	UPROPERTY()
 	bool Verificar = 0;
 	
-	UComponenteVelocidad* Velocidad;
+	//UComponenteVelocidad* Velocidad;
 };

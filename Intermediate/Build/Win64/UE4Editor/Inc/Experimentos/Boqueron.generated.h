@@ -61,8 +61,7 @@ public: \
 
 
 #define Experimentos_Source_Experimentos_Boqueron_h_13_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Gasolinera() { return STRUCT_OFFSET(ABoqueron, Gasolinera); } \
-	FORCEINLINE static uint32 __PPO__Motor() { return STRUCT_OFFSET(ABoqueron, Motor); }
+	FORCEINLINE static uint32 __PPO__PowerUp() { return STRUCT_OFFSET(ABoqueron, PowerUp); }
 
 
 #define Experimentos_Source_Experimentos_Boqueron_h_10_PROLOG

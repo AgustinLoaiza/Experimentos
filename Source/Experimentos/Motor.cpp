@@ -28,6 +28,17 @@ void AMotor::PickUp()
 	SetActorTickEnabled(false);
 	SetActorHiddenInGame(true);
 	SetActorEnableCollision(false);
+
+	/*AExperimentosPawn* Pawn = Cast<AExperimentosPawn>(GetOwner()); 
+	if (Pawn)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Pawn Found")); 
+		Pawn->MoveSpeed=3500.0f;
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No Pawn"));
+	}*/
 }
 
 void AMotor::PutDown(FTransform TargetLocation)

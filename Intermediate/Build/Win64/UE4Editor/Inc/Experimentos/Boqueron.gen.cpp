@@ -34,13 +34,9 @@ void EmptyLinkFunctionForGeneratedCodeBoqueron() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Gasolinera_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PowerUp_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Gasolinera;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Motor_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Motor;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_PowerUp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshBoqueron_MetaData[];
 #endif
@@ -61,19 +57,12 @@ void EmptyLinkFunctionForGeneratedCodeBoqueron() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoqueron_Statics::NewProp_Gasolinera_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp_MetaData[] = {
 		{ "Category", "Boqueron" },
 		{ "ModuleRelativePath", "Boqueron.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_Gasolinera = { "Gasolinera", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, Gasolinera), METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_Gasolinera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_Gasolinera_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoqueron_Statics::NewProp_Motor_MetaData[] = {
-		{ "Category", "Boqueron" },
-		{ "ModuleRelativePath", "Boqueron.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_Motor = { "Motor", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, Motor), METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_Motor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_Motor_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp = { "PowerUp", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, PowerUp), METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron_MetaData[] = {
 		{ "Category", "Boqueron" },
@@ -83,8 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeBoqueron() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron = { "MeshBoqueron", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, MeshBoqueron), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABoqueron_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_Gasolinera,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_Motor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABoqueron_Statics::InterfaceParams[] = {
@@ -117,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeBoqueron() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABoqueron, 976472405);
+	IMPLEMENT_CLASS(ABoqueron, 1814134836);
 	template<> EXPERIMENTOS_API UClass* StaticClass<ABoqueron>()
 	{
 		return ABoqueron::StaticClass();

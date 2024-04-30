@@ -2,6 +2,8 @@
 
 
 #include "Boqueron.h"
+#include "Gasolinera.h"
+#include "Motor.h"
 
 // Sets default values
 ABoqueron::ABoqueron()
@@ -9,7 +11,7 @@ ABoqueron::ABoqueron()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	MeshBoqueron = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Gasolinera"));
+	MeshBoqueron = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Boqueron"));
 	MeshBoqueron->SetupAttachment(RootComponent);
 	RootComponent = MeshBoqueron;
 }
@@ -18,20 +20,20 @@ ABoqueron::ABoqueron()
 void ABoqueron::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
 void ABoqueron::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-}
-
-void ABoqueron::SetGasolinera(FString _Gasolinera)
-{
-	Gasolinera = _Gasolinera;
-
+	TiempoTranscurrido += DeltaTime;
+	if (TiempoTranscurrido>=5)
+	{
+		BuildPowerUp(); 
+		TiempoTranscurrido = 0;
+	}
+	UbicacionBoqueron = GetActorLocation();
+	
 }
 
 void ABoqueron::SetMesh(UStaticMeshComponent* _MeshBoqueron)
@@ -39,14 +41,48 @@ void ABoqueron::SetMesh(UStaticMeshComponent* _MeshBoqueron)
 	MeshBoqueron = _MeshBoqueron; 
 }
 
-void ABoqueron::SetMotor(FString _Motor)
+void ABoqueron::SetPowerUp(FString _PowerUp)
 {
-	Motor = _Motor; 
+	PowerUp = _PowerUp; 
+}
+
+void ABoqueron::BuildPowerUp()
+{
+	if (PowerUp=="Gasolinera")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionGasolinera = UbicacionBoqueron+FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AGasolinera>(ubicacionGasolinera, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Gasolinera"));
+		}
+	}
+	else if (PowerUp == "Motor")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionGasolinera = UbicacionBoqueron+FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AMotor>(ubicacionGasolinera, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Motor"));
+		}
+	}
+	else if (PowerUp == "Armeria")
+	{
+
+	}
+	else if (PowerUp == "ComponenteChino")
+	{
+
+	}
+	else
+	{
+		nullptr;
+	}
 }
 
 void ABoqueron::Caracteristicas()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("%s"), *Gasolinera));
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("%s"), *Motor));
 }
 

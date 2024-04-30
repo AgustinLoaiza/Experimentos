@@ -22,7 +22,6 @@ class EXPERIMENTOS_API IPlanosDeAsedio
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void SetGasolinera(FString Gasolinera) = 0;
+	virtual void SetPowerUp(FString PowerUp) = 0;
 	virtual void SetMesh(UStaticMeshComponent* MeshBoqueron) = 0;
-	virtual void SetMotor(FString Motor) = 0;
 };

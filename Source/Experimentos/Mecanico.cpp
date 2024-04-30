@@ -2,6 +2,8 @@
 
 
 #include "Mecanico.h"
+#include "Motor.h"
+#include "Boqueron.h"
 
 // Sets default values
 AMecanico::AMecanico()
@@ -27,22 +29,26 @@ void AMecanico::Tick(float DeltaTime)
 
 void AMecanico::BuildBoqueron(FVector UbicacionBoqueron)
 {
+	Boqueron = GetWorld()->SpawnActor<ABoqueron>(ABoqueron::StaticClass(), UbicacionBoqueron, FRotator::ZeroRotator);
+	Boqueron->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Estancia():Lodging is NULL, make sure it's initialized.")); return; }
 }
 
-void AMecanico::BuildMotor()
-{
-}
 
 void AMecanico::BuildMesh()
 {
+	Boqueron->MeshBoqueron->SetStaticMesh(Motor);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void AMecanico::BuildGasolinera()
+void AMecanico::BuildPowerUps()
 {
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Mecanico")); return; }
+	Boqueron->SetPowerUp("Motor");
 }
 
 ABoqueron* AMecanico::GetBoqueron()
 {
-	return nullptr;
+	return Boqueron;
 }
 
