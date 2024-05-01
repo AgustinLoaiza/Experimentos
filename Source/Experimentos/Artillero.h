@@ -27,7 +27,7 @@ public:
 	virtual void BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion) override;
 	virtual void BuildMesh() override;
 	virtual void BuildPowerUps() override;
-	class UStaticMesh* Municion = LoadObject<UStaticMesh>(nullptr, TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
+	class UStaticMesh* Municion = LoadObject<UStaticMesh>(nullptr, TEXT("StaticMesh'/Game/Mallas/0f1a3d0cc128_Fortaleza_militar__.0f1a3d0cc128_Fortaleza_militar__'"));
 	virtual class ABoqueron* GetBoqueron() override;
 	ABoqueron* Boqueron;
 };
