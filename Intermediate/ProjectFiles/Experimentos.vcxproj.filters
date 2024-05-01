@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Experimentos.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A028CC3F-024E-4DED-9480-8A3DB644AB29}</UniqueIdentifier>
+      <UniqueIdentifier>{670D59EF-92CE-4AD5-8314-2A1FAE6315F4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Experimentos.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{25D504DC-154B-4812-BB28-263E79F6EE29}</UniqueIdentifier>
+      <UniqueIdentifier>{201537FD-E6B7-4472-B2D6-0F71CB8D2248}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Experimentos">
-      <UniqueIdentifier>{547B9D41-D8BB-43E3-8A7F-82EE41159A0E}</UniqueIdentifier>
+      <UniqueIdentifier>{82B82E72-BBE0-4B45-AE46-3D0EBFA96E20}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Experimentos\Boqueron.cpp">
       <Filter>Source\Experimentos</Filter>
@@ -40,16 +40,16 @@
     <ClInclude Include="..\..\Source\Experimentos\Boqueron.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\ComponenteChino.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\ComponenteChino.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Experimentos\ComponenteMotor.cpp">
       <Filter>Source\Experimentos</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Experimentos\ComponenteMotor.h">
-      <Filter>Source\Experimentos</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Experimentos\ComponenteVelocidad.cpp">
-      <Filter>Source\Experimentos</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Experimentos\ComponenteVelocidad.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
     <None Include="..\..\Source\Experimentos\Experimentos.Build.cs">
@@ -79,6 +79,12 @@
     <ClInclude Include="..\..\Source\Experimentos\ExperimentosProjectile.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\FuncionChina.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\FuncionChina.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Experimentos\Gasolinera.cpp">
       <Filter>Source\Experimentos</Filter>
     </ClCompile>
@@ -89,6 +95,12 @@
       <Filter>Source\Experimentos</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Experimentos\HansKundt.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\MagiaChina.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\MagiaChina.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Experimentos\Mecanico.cpp">
@@ -107,6 +119,12 @@
       <Filter>Source\Experimentos</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Experimentos\Obrero.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\Pirata.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\Pirata.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Experimentos\PlanosDeAsedio.cpp">

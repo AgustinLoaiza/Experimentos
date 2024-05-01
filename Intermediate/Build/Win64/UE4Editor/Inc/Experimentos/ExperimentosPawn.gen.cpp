@@ -22,12 +22,29 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_AMotor_NoRegister();
+	EXPERIMENTOS_API UClass* Z_Construct_UClass_AComponenteChino_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_UComponenteMotor_NoRegister();
+	EXPERIMENTOS_API UClass* Z_Construct_UClass_UMagiaChina_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AExperimentosPawn::execTakeItemChino)
+	{
+		P_GET_OBJECT(AComponenteChino,Z_Param_InventoryItem);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TakeItemChino(Z_Param_InventoryItem);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AExperimentosPawn::execDropItemChino)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DropItemChino();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AExperimentosPawn::execNotifyHit)
 	{
 		P_GET_OBJECT(UPrimitiveComponent,Z_Param_MyComp);
@@ -63,8 +80,10 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		UClass* Class = AExperimentosPawn::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "DropItem", &AExperimentosPawn::execDropItem },
+			{ "DropItemChino", &AExperimentosPawn::execDropItemChino },
 			{ "NotifyHit", &AExperimentosPawn::execNotifyHit },
 			{ "TakeItem", &AExperimentosPawn::execTakeItem },
+			{ "TakeItemChino", &AExperimentosPawn::execTakeItemChino },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -87,6 +106,28 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AExperimentosPawn_DropItem_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AExperimentosPawn_DropItemChino_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AExperimentosPawn_DropItemChino_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ExperimentosPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AExperimentosPawn_DropItemChino_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AExperimentosPawn, nullptr, "DropItemChino", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AExperimentosPawn_DropItemChino_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AExperimentosPawn_DropItemChino_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AExperimentosPawn_DropItemChino()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AExperimentosPawn_DropItemChino_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -211,6 +252,38 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics
+	{
+		struct ExperimentosPawn_eventTakeItemChino_Parms
+		{
+			AComponenteChino* InventoryItem;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InventoryItem;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::NewProp_InventoryItem = { "InventoryItem", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ExperimentosPawn_eventTakeItemChino_Parms, InventoryItem), Z_Construct_UClass_AComponenteChino_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::NewProp_InventoryItem,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ExperimentosPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AExperimentosPawn, nullptr, "TakeItemChino", nullptr, nullptr, sizeof(ExperimentosPawn_eventTakeItemChino_Parms), Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AExperimentosPawn_TakeItemChino()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AExperimentosPawn_NoRegister()
 	{
 		return AExperimentosPawn::StaticClass();
@@ -254,6 +327,10 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Motor_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Motor;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ComponenteChino_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ComponenteChino;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -264,8 +341,10 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AExperimentosPawn_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AExperimentosPawn_DropItem, "DropItem" }, // 1855372558
+		{ &Z_Construct_UFunction_AExperimentosPawn_DropItemChino, "DropItemChino" }, // 1624559457
 		{ &Z_Construct_UFunction_AExperimentosPawn_NotifyHit, "NotifyHit" }, // 3227429789
 		{ &Z_Construct_UFunction_AExperimentosPawn_TakeItem, "TakeItem" }, // 2649405094
+		{ &Z_Construct_UFunction_AExperimentosPawn_TakeItemChino, "TakeItemChino" }, // 549394279
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AExperimentosPawn_Statics::Class_MetaDataParams[] = {
@@ -347,11 +426,22 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_FireSound = { "FireSound", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AExperimentosPawn, FireSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_FireSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_FireSound_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Motor_MetaData[] = {
+		{ "Comment", "//Interaccion de Pawn con el Motor\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "ExperimentosPawn.h" },
+		{ "ToolTip", "Interaccion de Pawn con el Motor" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Motor = { "Motor", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AExperimentosPawn, Motor), Z_Construct_UClass_UComponenteMotor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Motor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Motor_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_ComponenteChino_MetaData[] = {
+		{ "Comment", "//Interaccion de Pawn con el ComponenteChino\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ExperimentosPawn.h" },
+		{ "ToolTip", "Interaccion de Pawn con el ComponenteChino" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_ComponenteChino = { "ComponenteChino", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AExperimentosPawn, ComponenteChino), Z_Construct_UClass_UMagiaChina_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_ComponenteChino_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_ComponenteChino_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AExperimentosPawn_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_ShipMeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_CameraComponent,
@@ -361,6 +451,7 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_MoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_FireSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Motor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_ComponenteChino,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AExperimentosPawn_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AExperimentosPawn>::IsAbstract,
@@ -389,7 +480,7 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AExperimentosPawn, 3072485098);
+	IMPLEMENT_CLASS(AExperimentosPawn, 2575926419);
 	template<> EXPERIMENTOS_API UClass* StaticClass<AExperimentosPawn>()
 	{
 		return AExperimentosPawn::StaticClass();

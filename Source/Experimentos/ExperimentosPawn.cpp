@@ -52,6 +52,7 @@ AExperimentosPawn::AExperimentosPawn()
 	bCanFire = true;
 
 	Motor= CreateDefaultSubobject<UComponenteMotor>("Motor");
+	ComponenteChino = CreateDefaultSubobject<UMagiaChina>("ComponenteChino"); 
 }
 
 void AExperimentosPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -103,33 +104,38 @@ void AExperimentosPawn::Tick(float DeltaSeconds)
 
 void AExperimentosPawn::FireShot(FVector FireDirection)
 {
-	// If it's ok to fire again
-	if (bCanFire == true)
+	if (cargador > 0)
 	{
-		// If we are pressing fire stick in a direction
-		if (FireDirection.SizeSquared() > 0.0f)
+		// If it's ok to fire again
+		if (bCanFire == true)
 		{
-			const FRotator FireRotation = FireDirection.Rotation();
-			// Spawn projectile at an offset from this pawn
-			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
-
-			UWorld* const World = GetWorld();
-			if (World != nullptr)
+			// If we are pressing fire stick in a direction
+			if (FireDirection.SizeSquared() > 0.0f)
 			{
-				// spawn the projectile
-				World->SpawnActor<AExperimentosProjectile>(SpawnLocation, FireRotation);
+				const FRotator FireRotation = FireDirection.Rotation();
+				// Spawn projectile at an offset from this pawn
+				const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
+
+				UWorld* const World = GetWorld();
+				if (World != nullptr)
+				{
+					// spawn the projectile
+					World->SpawnActor<AExperimentosProjectile>(SpawnLocation, FireRotation);
+				}
+				//Reducimos las balas del cargador
+				cargador--;
+
+				bCanFire = false;
+				World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AExperimentosPawn::ShotTimerExpired, FireRate);
+
+				// try and play the sound if specified
+				if (FireSound != nullptr)
+				{
+					UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+				}
+
+				bCanFire = false;
 			}
-
-			bCanFire = false;
-			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AExperimentosPawn::ShotTimerExpired, FireRate);
-
-			// try and play the sound if specified
-			if (FireSound != nullptr)
-			{
-				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-			}
-
-			bCanFire = false;
 		}
 	}
 }
@@ -139,6 +145,7 @@ void AExperimentosPawn::ShotTimerExpired()
 	bCanFire = true;
 }
 
+//Inicalizacion de las funciones de recoger y soltar Motor
 void AExperimentosPawn::DropItem()
 {
 	if (Motor->CurrentInventory.Num() == 0)
@@ -154,6 +161,36 @@ void AExperimentosPawn::DropItem()
 	Item->PutDown(PutDownLocation);
 }
 
+void AExperimentosPawn::TakeItem(AMotor* InventoryItem)
+{
+	InventoryItem->PickUp();
+	Motor->AddToInventory(InventoryItem);
+}
+
+//Inicalizacion de las funciones de recoger y soltar ComponenteChino
+void AExperimentosPawn::DropItemChino()
+{
+	if (ComponenteChino->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AComponenteChino* Item = ComponenteChino->CurrentInventory.Last();
+	ComponenteChino->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->UtilizarComponente(PutDownLocation);
+}
+
+void AExperimentosPawn::TakeItemChino(AComponenteChino* InventoryItem)
+{
+	FuncionChina->ActivarMovimiento();
+	InventoryItem->ComprarComponente(); 
+	ComponenteChino->AddToInventory(InventoryItem);
+}
+
+//Notificacion del choque con los Items
 void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
 	AMotor* InventoryItem = Cast<AMotor>(Other);
@@ -162,11 +199,9 @@ void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Oth
 		TakeItem(InventoryItem);
 		MoveSpeed = 2500.0f;
 	}
+	AComponenteChino* InventoryItemChino = Cast<AComponenteChino>(Other);
+	if (InventoryItemChino != nullptr)
+	{
+		TakeItemChino(InventoryItemChino); 
+	}
 }
-
-void AExperimentosPawn::TakeItem(AMotor* InventoryItem)
-{
-	InventoryItem->PickUp();
-	Motor->AddToInventory(InventoryItem);
-}
-

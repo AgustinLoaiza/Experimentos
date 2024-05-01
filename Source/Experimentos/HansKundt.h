@@ -29,5 +29,5 @@ public:
 	void ConstruirBoqueron(FVector UbicacionBoqueron);
 	void SetObrero(AActor* Albaco);
 	class ABoqueron* GetBoqueron();
-	IObrero* Obrero;
+	IObrero* Obrero; 
 };

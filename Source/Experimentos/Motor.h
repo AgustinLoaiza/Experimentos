@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "Engine/StaticMeshActor.h"
 #include "TimerManager.h"
-#include "ComponenteVelocidad.h"
 #include "Motor.generated.h"
 
 /**
@@ -31,6 +30,4 @@ public:
 	float TiempoTranscurrido;
 	UPROPERTY()
 	bool Verificar = 0;
-	
-	//UComponenteVelocidad* Velocidad;
 };

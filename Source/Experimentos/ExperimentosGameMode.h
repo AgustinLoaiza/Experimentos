@@ -18,6 +18,7 @@ private:
 
 	class ASurtidor* Surtidor;
 	class AMecanico* Mecanico;
+	class APirata* Pirata;
 	class AHansKundt* HansKundt;
 
 protected:

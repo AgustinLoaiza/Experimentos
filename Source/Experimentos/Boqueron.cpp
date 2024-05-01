@@ -4,6 +4,7 @@
 #include "Boqueron.h"
 #include "Gasolinera.h"
 #include "Motor.h"
+#include "ComponenteChino.h"
 
 // Sets default values
 ABoqueron::ABoqueron()
@@ -63,8 +64,8 @@ void ABoqueron::BuildPowerUp()
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			FVector ubicacionGasolinera = UbicacionBoqueron+FVector(-100.0f, 300.0f, 0.0f);
-			World->SpawnActor<AMotor>(ubicacionGasolinera, FRotator::ZeroRotator);
+			FVector ubicacionMotor = UbicacionBoqueron+FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AMotor>(ubicacionMotor, FRotator::ZeroRotator);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Motor"));
 		}
 	}
@@ -74,7 +75,13 @@ void ABoqueron::BuildPowerUp()
 	}
 	else if (PowerUp == "ComponenteChino")
 	{
-
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionCompChino = UbicacionBoqueron + FVector(-100.0f, 300.0f, 0.0f);  
+			World->SpawnActor<AComponenteChino>(ubicacionCompChino, FRotator::ZeroRotator);  
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el ComponenteChino"));
+		}
 	}
 	else
 	{

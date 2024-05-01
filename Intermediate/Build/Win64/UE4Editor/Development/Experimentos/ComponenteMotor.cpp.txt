@@ -3,7 +3,5 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ComponenteMo
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Motor.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ComponenteVelocidad.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ComponenteVelocidad.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Motor.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ComponenteMotor.generated.h

@@ -6,7 +6,8 @@
 #include "GameFramework/Character.h"
 #include "ComponenteMotor.h"
 #include "Motor.h"
-#include "ComponenteVelocidad.h"
+#include "MagiaChina.h"
+#include "ComponenteChino.h"
 #include "ExperimentosPawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -62,6 +63,9 @@ public:
 	static const FName FireForwardBinding;
 	static const FName FireRightBinding;
 
+	//Le damos un cargador a nuestra Nave
+	int32 cargador = 50;
+
 private:
 
 	/* Flag to control firing  */
@@ -79,6 +83,7 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
 public:
+	//Interaccion de Pawn con el Motor
 	UPROPERTY()
 	UComponenteMotor* Motor;
 	UFUNCTION()
@@ -88,5 +93,14 @@ public:
 	UFUNCTION()
 	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 
+	//Interaccion de Pawn con el ComponenteChino
+	UPROPERTY()
+	UMagiaChina* ComponenteChino;
+	UFUNCTION()
+	void DropItemChino();
+	UFUNCTION()
+	void TakeItemChino(AComponenteChino* InventoryItem);
+
+	UFuncionChina* FuncionChina;
 };
 

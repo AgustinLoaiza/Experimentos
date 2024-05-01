@@ -4,24 +4,26 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "ComponenteVelocidad.generated.h"
+#include "ComponenteChino.h"
+#include "MagiaChina.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class EXPERIMENTOS_API UComponenteVelocidad : public UActorComponent
+class EXPERIMENTOS_API UMagiaChina : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UComponenteVelocidad();
+	UMagiaChina();
 
 	UPROPERTY()
-	float Velocidad;
-	UPROPERTY() 
-	float TiempoTranscurrido; 
+	TArray<AComponenteChino*> CurrentInventory;
+	UFUNCTION()
+	int32 AddToInventory(AComponenteChino* ActorToAdd);
+	UFUNCTION()
+	void RemoveFromInventory(AComponenteChino* ActorToRemove);
 
-	bool verificar = false; 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -29,7 +31,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	void MejorarVelocidad(float DeltaTime);
-	void ActivarVelocidad();
+
 		
 };
