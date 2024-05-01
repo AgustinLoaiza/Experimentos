@@ -4,6 +4,7 @@
 #include "Boqueron.h"
 #include "Gasolinera.h"
 #include "Motor.h"
+#include "Municion.h"
 #include "ComponenteChino.h"
 
 // Sets default values
@@ -49,7 +50,7 @@ void ABoqueron::SetPowerUp(FString _PowerUp)
 
 void ABoqueron::BuildPowerUp()
 {
-	if (PowerUp=="Gasolinera")
+	if (PowerUp == "Gasolinera")
 	{
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
@@ -67,6 +68,16 @@ void ABoqueron::BuildPowerUp()
 			FVector ubicacionMotor = UbicacionBoqueron+FVector(-100.0f, 300.0f, 0.0f);
 			World->SpawnActor<AMotor>(ubicacionMotor, FRotator::ZeroRotator);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Motor"));
+		}
+	}
+	else if (PowerUp == "Municion")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionMunicion = UbicacionBoqueron + FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AMunicion>(ubicacionMunicion, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Municion"));
 		}
 	}
 	else if (PowerUp == "Armeria")

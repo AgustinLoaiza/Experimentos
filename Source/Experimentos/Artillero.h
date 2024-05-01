@@ -27,7 +27,7 @@ public:
 	virtual void BuildBoqueron(FVector UbicacionBoqueron) override;
 	virtual void BuildMesh() override;
 	virtual void BuildPowerUps() override;
-	class UStaticMesh* Gasolinera = LoadObject<UStaticMesh>(nullptr, TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
+	class UStaticMesh* Municion = LoadObject<UStaticMesh>(nullptr, TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
 	virtual class ABoqueron* GetBoqueron() override;
 	ABoqueron* Boqueron;
 };

@@ -2,6 +2,8 @@
 
 
 #include "Artillero.h"
+#include "Municion.h"
+#include "Boqueron.h"
 
 // Sets default values
 AArtillero::AArtillero()
@@ -27,18 +29,25 @@ void AArtillero::Tick(float DeltaTime)
 
 void AArtillero::BuildBoqueron(FVector UbicacionBoqueron)
 {
+	Boqueron = GetWorld()->SpawnActor<ABoqueron>(ABoqueron::StaticClass(), UbicacionBoqueron, FRotator::ZeroRotator);
+	Boqueron->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Estancia():Lodging is NULL, make sure it's initialized.")); return; }
 }
 
 void AArtillero::BuildMesh()
 {
+	Boqueron->MeshBoqueron->SetStaticMesh(Municion);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
 void AArtillero::BuildPowerUps()
 {
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
+	Boqueron->SetPowerUp("Municion");
 }
 
 ABoqueron* AArtillero::GetBoqueron()
 {
-	return nullptr;
+	return Boqueron;
 }
 

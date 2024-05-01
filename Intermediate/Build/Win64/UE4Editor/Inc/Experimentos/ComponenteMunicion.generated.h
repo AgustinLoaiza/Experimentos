@@ -8,15 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AMunicion;
 #ifdef EXPERIMENTOS_ComponenteMunicion_generated_h
 #error "ComponenteMunicion.generated.h already included, missing '#pragma once' in ComponenteMunicion.h"
 #endif
 #define EXPERIMENTOS_ComponenteMunicion_generated_h
 
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_SPARSE_DATA
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_RPC_WRAPPERS
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_INCLASS_NO_PURE_DECLS \
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_SPARSE_DATA
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execRemoveFromInventory); \
+	DECLARE_FUNCTION(execAddToInventory);
+
+
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRemoveFromInventory); \
+	DECLARE_FUNCTION(execAddToInventory);
+
+
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUComponenteMunicion(); \
 	friend struct Z_Construct_UClass_UComponenteMunicion_Statics; \
@@ -25,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(UComponenteMunicion)
 
 
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_INCLASS \
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesUComponenteMunicion(); \
 	friend struct Z_Construct_UClass_UComponenteMunicion_Statics; \
@@ -34,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(UComponenteMunicion)
 
 
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_STANDARD_CONSTRUCTORS \
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UComponenteMunicion(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UComponenteMunicion) \
@@ -47,7 +58,7 @@ private: \
 public:
 
 
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_ENHANCED_CONSTRUCTORS \
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UComponenteMunicion(UComponenteMunicion&&); \
@@ -58,28 +69,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UComponenteMunicion)
 
 
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_PRIVATE_PROPERTY_OFFSET
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_10_PROLOG
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_GENERATED_BODY_LEGACY \
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_PRIVATE_PROPERTY_OFFSET
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_11_PROLOG
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_PRIVATE_PROPERTY_OFFSET \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_SPARSE_DATA \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_RPC_WRAPPERS \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_INCLASS \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_STANDARD_CONSTRUCTORS \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_PRIVATE_PROPERTY_OFFSET \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_SPARSE_DATA \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_RPC_WRAPPERS \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_INCLASS \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Experimentos_Source_Experimentos_ComponenteMunicion_h_13_GENERATED_BODY \
+#define Experimentos_Source_Experimentos_ComponenteMunicion_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_PRIVATE_PROPERTY_OFFSET \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_SPARSE_DATA \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_INCLASS_NO_PURE_DECLS \
-	Experimentos_Source_Experimentos_ComponenteMunicion_h_13_ENHANCED_CONSTRUCTORS \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_PRIVATE_PROPERTY_OFFSET \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_SPARSE_DATA \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_INCLASS_NO_PURE_DECLS \
+	Experimentos_Source_Experimentos_ComponenteMunicion_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

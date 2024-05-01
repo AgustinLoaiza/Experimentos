@@ -8,37 +8,42 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AComponenteChino;
 class UPrimitiveComponent;
 class AActor;
 struct FVector;
 struct FHitResult;
+class AComponenteChino;
+class AMunicion;
 class AMotor;
 #ifdef EXPERIMENTOS_ExperimentosPawn_generated_h
 #error "ExperimentosPawn.generated.h already included, missing '#pragma once' in ExperimentosPawn.h"
 #endif
 #define EXPERIMENTOS_ExperimentosPawn_generated_h
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_SPARSE_DATA
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_RPC_WRAPPERS \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_SPARSE_DATA
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execNotifyHit); \
 	DECLARE_FUNCTION(execTakeItemChino); \
 	DECLARE_FUNCTION(execDropItemChino); \
-	DECLARE_FUNCTION(execNotifyHit); \
+	DECLARE_FUNCTION(execTakeItemMunicion); \
+	DECLARE_FUNCTION(execDropItemMunicion); \
 	DECLARE_FUNCTION(execTakeItem); \
 	DECLARE_FUNCTION(execDropItem);
 
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execNotifyHit); \
 	DECLARE_FUNCTION(execTakeItemChino); \
 	DECLARE_FUNCTION(execDropItemChino); \
-	DECLARE_FUNCTION(execNotifyHit); \
+	DECLARE_FUNCTION(execTakeItemMunicion); \
+	DECLARE_FUNCTION(execDropItemMunicion); \
 	DECLARE_FUNCTION(execTakeItem); \
 	DECLARE_FUNCTION(execDropItem);
 
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_INCLASS_NO_PURE_DECLS \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAExperimentosPawn(); \
 	friend struct Z_Construct_UClass_AExperimentosPawn_Statics; \
@@ -47,7 +52,7 @@ public: \
 	DECLARE_SERIALIZER(AExperimentosPawn)
 
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_INCLASS \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesAExperimentosPawn(); \
 	friend struct Z_Construct_UClass_AExperimentosPawn_Statics; \
@@ -56,7 +61,7 @@ public: \
 	DECLARE_SERIALIZER(AExperimentosPawn)
 
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_STANDARD_CONSTRUCTORS \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AExperimentosPawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AExperimentosPawn) \
@@ -69,7 +74,7 @@ private: \
 public:
 
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_ENHANCED_CONSTRUCTORS \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AExperimentosPawn(AExperimentosPawn&&); \
@@ -80,33 +85,33 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AExperimentosPawn)
 
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_PRIVATE_PROPERTY_OFFSET \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ShipMeshComponent() { return STRUCT_OFFSET(AExperimentosPawn, ShipMeshComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraComponent() { return STRUCT_OFFSET(AExperimentosPawn, CameraComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(AExperimentosPawn, CameraBoom); }
 
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_13_PROLOG
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_GENERATED_BODY_LEGACY \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_18_PROLOG
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_PRIVATE_PROPERTY_OFFSET \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_SPARSE_DATA \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_RPC_WRAPPERS \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_INCLASS \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_STANDARD_CONSTRUCTORS \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_PRIVATE_PROPERTY_OFFSET \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_SPARSE_DATA \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_RPC_WRAPPERS \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_INCLASS \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Experimentos_Source_Experimentos_ExperimentosPawn_h_16_GENERATED_BODY \
+#define Experimentos_Source_Experimentos_ExperimentosPawn_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_PRIVATE_PROPERTY_OFFSET \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_SPARSE_DATA \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_INCLASS_NO_PURE_DECLS \
-	Experimentos_Source_Experimentos_ExperimentosPawn_h_16_ENHANCED_CONSTRUCTORS \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_PRIVATE_PROPERTY_OFFSET \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_SPARSE_DATA \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_INCLASS_NO_PURE_DECLS \
+	Experimentos_Source_Experimentos_ExperimentosPawn_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

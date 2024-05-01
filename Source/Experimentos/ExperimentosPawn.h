@@ -4,8 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+//Incluimos todo relacionado a Motor
 #include "ComponenteMotor.h"
 #include "Motor.h"
+//Incluimos todo relacionado a Municion
+#include "ComponenteMunicion.h"
+#include "Municion.h"
+//Incluimos todo relacionado al ComponenteChino
 #include "MagiaChina.h"
 #include "ComponenteChino.h"
 #include "ExperimentosPawn.generated.h"
@@ -90,8 +95,15 @@ public:
 	void DropItem();
 	UFUNCTION()
 	void TakeItem(AMotor* InventoryItem);
+	
+
+	//Interaccion de Pawn con la Municion
+	UPROPERTY()
+	UComponenteMunicion* Municion;
 	UFUNCTION()
-	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
+	void DropItemMunicion();
+	UFUNCTION()
+	void TakeItemMunicion(AMunicion* InventoryItem);
 
 	//Interaccion de Pawn con el ComponenteChino
 	UPROPERTY()
@@ -102,5 +114,9 @@ public:
 	void TakeItemChino(AComponenteChino* InventoryItem);
 
 	UFuncionChina* FuncionChina;
+
+	//Interaccion de Pawn con todos los consumibles, la notificacion de la colision
+	UFUNCTION()
+	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 };
 

@@ -7,8 +7,11 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\ExperimentosEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Armeria.cpp.obj"
+"C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Armero.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Artillero.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Boqueron.cpp.obj"
+"C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\ComponenteArmeria.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\ComponenteChino.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\ComponenteMotor.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\ComponenteMunicion.cpp.obj"
@@ -27,8 +30,11 @@
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Pirata.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\PlanosDeAsedio.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Surtidor.cpp.obj"
+"C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Armeria.gen.cpp.obj"
+"C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Armero.gen.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Artillero.gen.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Boqueron.gen.cpp.obj"
+"C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\ComponenteArmeria.gen.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\ComponenteChino.gen.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\ComponenteMotor.gen.cpp.obj"
 "C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\ComponenteMunicion.gen.cpp.obj"

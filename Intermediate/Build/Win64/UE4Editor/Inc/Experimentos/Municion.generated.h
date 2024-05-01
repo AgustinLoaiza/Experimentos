@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define EXPERIMENTOS_Municion_generated_h
 
-#define Experimentos_Source_Experimentos_Municion_h_15_SPARSE_DATA
-#define Experimentos_Source_Experimentos_Municion_h_15_RPC_WRAPPERS
-#define Experimentos_Source_Experimentos_Municion_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define Experimentos_Source_Experimentos_Municion_h_15_INCLASS_NO_PURE_DECLS \
+#define Experimentos_Source_Experimentos_Municion_h_16_SPARSE_DATA
+#define Experimentos_Source_Experimentos_Municion_h_16_RPC_WRAPPERS
+#define Experimentos_Source_Experimentos_Municion_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define Experimentos_Source_Experimentos_Municion_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMunicion(); \
 	friend struct Z_Construct_UClass_AMunicion_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AMunicion)
 
 
-#define Experimentos_Source_Experimentos_Municion_h_15_INCLASS \
+#define Experimentos_Source_Experimentos_Municion_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesAMunicion(); \
 	friend struct Z_Construct_UClass_AMunicion_Statics; \
@@ -34,9 +34,9 @@ public: \
 	DECLARE_SERIALIZER(AMunicion)
 
 
-#define Experimentos_Source_Experimentos_Municion_h_15_STANDARD_CONSTRUCTORS \
+#define Experimentos_Source_Experimentos_Municion_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AMunicion(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AMunicion(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMunicion) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AMunicion); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMunicion); \
@@ -47,9 +47,7 @@ private: \
 public:
 
 
-#define Experimentos_Source_Experimentos_Municion_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AMunicion(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+#define Experimentos_Source_Experimentos_Municion_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMunicion(AMunicion&&); \
@@ -57,31 +55,31 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AMunicion); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMunicion); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMunicion)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMunicion)
 
 
-#define Experimentos_Source_Experimentos_Municion_h_15_PRIVATE_PROPERTY_OFFSET
-#define Experimentos_Source_Experimentos_Municion_h_12_PROLOG
-#define Experimentos_Source_Experimentos_Municion_h_15_GENERATED_BODY_LEGACY \
+#define Experimentos_Source_Experimentos_Municion_h_16_PRIVATE_PROPERTY_OFFSET
+#define Experimentos_Source_Experimentos_Municion_h_13_PROLOG
+#define Experimentos_Source_Experimentos_Municion_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Experimentos_Source_Experimentos_Municion_h_15_PRIVATE_PROPERTY_OFFSET \
-	Experimentos_Source_Experimentos_Municion_h_15_SPARSE_DATA \
-	Experimentos_Source_Experimentos_Municion_h_15_RPC_WRAPPERS \
-	Experimentos_Source_Experimentos_Municion_h_15_INCLASS \
-	Experimentos_Source_Experimentos_Municion_h_15_STANDARD_CONSTRUCTORS \
+	Experimentos_Source_Experimentos_Municion_h_16_PRIVATE_PROPERTY_OFFSET \
+	Experimentos_Source_Experimentos_Municion_h_16_SPARSE_DATA \
+	Experimentos_Source_Experimentos_Municion_h_16_RPC_WRAPPERS \
+	Experimentos_Source_Experimentos_Municion_h_16_INCLASS \
+	Experimentos_Source_Experimentos_Municion_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Experimentos_Source_Experimentos_Municion_h_15_GENERATED_BODY \
+#define Experimentos_Source_Experimentos_Municion_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Experimentos_Source_Experimentos_Municion_h_15_PRIVATE_PROPERTY_OFFSET \
-	Experimentos_Source_Experimentos_Municion_h_15_SPARSE_DATA \
-	Experimentos_Source_Experimentos_Municion_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Experimentos_Source_Experimentos_Municion_h_15_INCLASS_NO_PURE_DECLS \
-	Experimentos_Source_Experimentos_Municion_h_15_ENHANCED_CONSTRUCTORS \
+	Experimentos_Source_Experimentos_Municion_h_16_PRIVATE_PROPERTY_OFFSET \
+	Experimentos_Source_Experimentos_Municion_h_16_SPARSE_DATA \
+	Experimentos_Source_Experimentos_Municion_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	Experimentos_Source_Experimentos_Municion_h_16_INCLASS_NO_PURE_DECLS \
+	Experimentos_Source_Experimentos_Municion_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

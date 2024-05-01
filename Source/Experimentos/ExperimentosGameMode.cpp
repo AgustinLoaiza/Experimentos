@@ -5,6 +5,7 @@
 #include "Surtidor.h"
 #include "Mecanico.h"
 #include "Pirata.h"
+#include "Artillero.h"
 #include "HansKundt.h"
 #include "Boqueron.h"
 
@@ -19,6 +20,7 @@ void AExperimentosGameMode::BeginPlay()
 	Super::BeginPlay();
 
 	HansKundt = GetWorld()->SpawnActor<AHansKundt>(AHansKundt::StaticClass());
+
 	Surtidor= GetWorld()->SpawnActor<ASurtidor>(ASurtidor::StaticClass());
 	HansKundt->SetObrero(Surtidor);
 	HansKundt->ConstruirBoqueron(FVector(-1100.0f, 1300.0f, 215.0f));
@@ -26,6 +28,10 @@ void AExperimentosGameMode::BeginPlay()
 	Mecanico = GetWorld()->SpawnActor<AMecanico>(AMecanico::StaticClass()); 
 	HansKundt->SetObrero(Mecanico); 
 	HansKundt->ConstruirBoqueron(FVector(-1300.0f, 1100.0f, 215.0f));
+
+	Artillero= GetWorld()->SpawnActor<AArtillero>(AArtillero::StaticClass());
+	HansKundt->SetObrero(Artillero);
+	HansKundt->ConstruirBoqueron(FVector(-1400.0f, 1000.0f, 215.0f));
 
 	Pirata= GetWorld()->SpawnActor<APirata>(APirata::StaticClass());
 	HansKundt->SetObrero(Pirata);
