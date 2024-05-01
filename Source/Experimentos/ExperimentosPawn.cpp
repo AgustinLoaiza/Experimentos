@@ -58,6 +58,7 @@ AExperimentosPawn::AExperimentosPawn()
 	Municion = CreateDefaultSubobject<UComponenteMunicion>("Municion"); 
 	Armeria = CreateDefaultSubobject<UComponenteArmeria>("Armeria");
 	ComponenteChino = CreateDefaultSubobject<UMagiaChina>("ComponenteChino"); 
+	FuncionChina = CreateDefaultSubobject<UFuncionChina>("FuncionChina"); //Logica del movimiento del componente Chino
 }
 
 void AExperimentosPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -105,6 +106,22 @@ void AExperimentosPawn::Tick(float DeltaSeconds)
 
 	// Try and fire a shot
 	FireShot(FireDirection);
+
+	//Actualizamos la vida de la nave
+
+	if (energia<=0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Vida: " + FString::FromInt(vida)));
+		vida--;
+		SetActorLocation(FVector(0.0f, 0.0f, 250.0f));
+		energia = 100;
+		cargador=50;
+	}
+	if (vida<=0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Has muerto"));
+		Destroy();
+	}
 }
 
 void AExperimentosPawn::FireShot(FVector FireDirection)
@@ -126,6 +143,17 @@ void AExperimentosPawn::FireShot(FVector FireDirection)
 				{
 					// spawn the projectile
 					World->SpawnActor<AExperimentosProjectile>(SpawnLocation, FireRotation);
+
+					//Disparo multiple
+					if (DisparoMultiple)
+					{
+						const FRotator FireRotation2 = FireDirection.Rotation()+FRotator(10.0f, 30.0f, 0.0f);
+						const FRotator FireRotation3= FireDirection.Rotation()+FRotator(10.0f, -30.0f, 0.0f); 
+						const FVector SpawnLocation2 = GetActorLocation()+FVector(10.0f, 30.0f, 0.0f) + FireRotation2.RotateVector(GunOffset);
+						const FVector SpawnLocation3 = GetActorLocation()+FVector(10.0f, -30.0f, 0.0f) + FireRotation3.RotateVector(GunOffset);
+						World->SpawnActor<AExperimentosProjectile>(SpawnLocation2, FireRotation2);
+						World->SpawnActor<AExperimentosProjectile>(SpawnLocation3, FireRotation3); 
+					}
 				}
 				//Reducimos las balas del cargador
 				cargador--;
@@ -285,15 +313,24 @@ void AExperimentosPawn::TakeItemChino(AComponenteChino* InventoryItem)
 //Notificacion del choque con los Items
 void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
+	AObjetoPrueba* InventoryItemPrueba = Cast<AObjetoPrueba>(Other);
+	if (InventoryItemPrueba != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia: " + FString::FromInt(energia)));
+		energia-=10;
+	}
+
 	AGasolinera* InventoryItemGasolinera = Cast<AGasolinera>(Other);
 	if (InventoryItemGasolinera != nullptr)
 	{
 		TakeItemGasolinera(InventoryItemGasolinera);
+		energia = 100;
 	}
 	ACentroMedico* InventoryItemCentroMedico = Cast<ACentroMedico>(Other);
 	if (InventoryItemCentroMedico != nullptr)
 	{
 		TakeItemCentroMedico(InventoryItemCentroMedico);
+		vida+=1;
 	}
 	AMotor* InventoryItem = Cast<AMotor>(Other);
 	if (InventoryItem != nullptr)
@@ -311,6 +348,7 @@ void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Oth
 	if (InventoryItemArmeria != nullptr)
 	{
 		TakeItemArmeria(InventoryItemArmeria);
+		DisparoMultiple = true;
 	}
 	AComponenteChino* InventoryItemChino = Cast<AComponenteChino>(Other);
 	if (InventoryItemChino != nullptr)

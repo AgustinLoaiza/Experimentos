@@ -26,7 +26,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void ConstruirBoqueron(FVector UbicacionBoqueron);
+	void ConstruirBoqueron(FVector UbicacionBoqueron, FRotator Rotacion);
 	void SetObrero(AActor* Albaco);
 	class ABoqueron* GetBoqueron();
 	IObrero* Obrero; 

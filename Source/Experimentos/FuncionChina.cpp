@@ -12,6 +12,7 @@ UFuncionChina::UFuncionChina()
 
 	// ...
 
+	verificar = false;
 	Velocidad = 550.0f;
 	TiempoTranscurrido = 0;
 }

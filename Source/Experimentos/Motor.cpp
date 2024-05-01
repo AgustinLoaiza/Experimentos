@@ -34,6 +34,7 @@ void AMotor::PickUp()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Pawn Found")); 
 		Pawn->MoveSpeed=3500.0f;
+
 	}
 	else
 	{

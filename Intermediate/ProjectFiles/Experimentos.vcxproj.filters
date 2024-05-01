@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Experimentos.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{38AC74A6-0ADF-4A4B-9C40-F72C9B7EC094}</UniqueIdentifier>
+      <UniqueIdentifier>{BB268679-B958-40F1-9454-99D0B93699AD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Experimentos.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{7A16104A-BC26-41FA-BC1C-515320C7816B}</UniqueIdentifier>
+      <UniqueIdentifier>{8099BD90-F923-49B6-AA7D-BC1EF792C875}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Experimentos">
-      <UniqueIdentifier>{EB79C844-A6AB-41A8-86DD-4B5B184848D6}</UniqueIdentifier>
+      <UniqueIdentifier>{B49437CE-531B-4A82-A560-5EDFE32117FD}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Experimentos\Armeria.cpp">
       <Filter>Source\Experimentos</Filter>
@@ -173,6 +173,12 @@
       <Filter>Source\Experimentos</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Experimentos\Municion.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\ObjetoPrueba.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\ObjetoPrueba.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Experimentos\Obrero.cpp">

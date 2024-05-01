@@ -24,7 +24,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	virtual void BuildBoqueron(FVector UbicacionBoqueron) override;
+	virtual void BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion) override;
 	virtual void BuildMesh() override;
 	virtual void BuildPowerUps() override;
 	class UStaticMesh* ComponenteChino = LoadObject<UStaticMesh>(nullptr, TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));

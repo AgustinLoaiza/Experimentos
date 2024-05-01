@@ -46,7 +46,7 @@ ABoqueron* AHansKundt::GetBoqueron()
 	return nullptr;
 }
 
-void AHansKundt::ConstruirBoqueron(FVector UbicacionBoqueron)
+void AHansKundt::ConstruirBoqueron(FVector UbicacionBoqueron, FRotator Rotacion)
 {
 	if (!Obrero)
 	{
@@ -54,7 +54,7 @@ void AHansKundt::ConstruirBoqueron(FVector UbicacionBoqueron)
 		return;
 	}
 
-	Obrero->BuildBoqueron(UbicacionBoqueron);
+	Obrero->BuildBoqueron(UbicacionBoqueron, Rotacion);
 	Obrero->BuildMesh(); 
 	Obrero->BuildPowerUps();
 }

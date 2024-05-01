@@ -22,8 +22,11 @@
 //Incluimos todo relacionado al ComponenteChino
 #include "MagiaChina.h"
 #include "ComponenteChino.h"
+//Incluimos el objeto
+#include "ObjetoPrueba.h"
 
 #include "ExperimentosPawn.generated.h"
+
 
 UCLASS(Blueprintable)
 class AExperimentosPawn : public APawn
@@ -81,6 +84,12 @@ public:
 	//Le damos un cargador a nuestra Nave
 	int32 cargador = 50;
 
+	//Le damos una vida a nuestra Nave
+	int32 vida = 3;
+
+	//Le damos Combustible a la nave
+	int32 energia = 100;
+
 private:
 
 	/* Flag to control firing  */
@@ -137,6 +146,7 @@ public:
 	void DropItemArmeria();
 	UFUNCTION()
 	void TakeItemArmeria(AArmeria* InventoryItem);
+	bool DisparoMultiple = false;
 
 	//Interaccion de Pawn con el ComponenteChino
 	UPROPERTY()

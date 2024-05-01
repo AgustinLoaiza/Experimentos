@@ -27,9 +27,9 @@ void AArtillero::Tick(float DeltaTime)
 
 }
 
-void AArtillero::BuildBoqueron(FVector UbicacionBoqueron)
+void AArtillero::BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion)
 {
-	Boqueron = GetWorld()->SpawnActor<ABoqueron>(ABoqueron::StaticClass(), UbicacionBoqueron, FRotator::ZeroRotator);
+	Boqueron = GetWorld()->SpawnActor<ABoqueron>(ABoqueron::StaticClass(), UbicacionBoqueron, Rotacion);
 	Boqueron->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
 	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Estancia():Lodging is NULL, make sure it's initialized.")); return; }
 }

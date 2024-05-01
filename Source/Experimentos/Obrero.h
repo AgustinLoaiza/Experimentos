@@ -22,7 +22,7 @@ class EXPERIMENTOS_API IObrero
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void BuildBoqueron(FVector UbicacionBoqueron) = 0; 
+	virtual void BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion) = 0; 
 	virtual void BuildMesh() = 0;
 	virtual void BuildPowerUps() = 0;
 	virtual class ABoqueron* GetBoqueron() = 0;

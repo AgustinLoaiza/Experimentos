@@ -21,7 +21,7 @@ public:
 	UPROPERTY()
 	float TiempoTranscurrido;
 
-	bool verificar = false;
+	bool verificar;
 
 protected:
 	// Called when the game starts

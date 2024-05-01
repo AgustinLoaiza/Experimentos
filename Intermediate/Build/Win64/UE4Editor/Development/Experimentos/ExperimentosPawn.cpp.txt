@@ -34,6 +34,8 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\FuncionChina
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\FuncionChina.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ComponenteChino.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\MagiaChina.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ObjetoPrueba.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ObjetoPrueba.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ExperimentosPawn.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ExperimentosProjectile.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ExperimentosProjectile.generated.h
