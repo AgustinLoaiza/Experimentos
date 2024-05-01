@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+//Incluimos todo relacionado a Gasolinera
+#include "ComponenteGasolinera.h"
+#include "Gasolinera.h"
 //Incluimos todo relacionado a Motor
 #include "ComponenteMotor.h"
 #include "Motor.h"
@@ -92,6 +95,14 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
 public:
+	//Interaccion de Pawn con la Gasolinera
+	UPROPERTY()
+	UComponenteGasolinera* Gasolinera;
+	UFUNCTION()
+	void DropItemGasolinera();
+	UFUNCTION()
+	void TakeItemGasolinera(AGasolinera* InventoryItem);
+
 	//Interaccion de Pawn con el Motor
 	UPROPERTY()
 	UComponenteMotor* Motor;

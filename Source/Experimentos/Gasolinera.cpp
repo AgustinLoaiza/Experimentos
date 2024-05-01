@@ -2,34 +2,38 @@
 
 
 #include "Gasolinera.h"
+#include "UObject/ConstructorHelpers.h"
+#include "Components/StaticMeshComponent.h"
+#include "Engine/StaticMesh.h"
+#include "Engine/CollisionProfile.h"
+#include "ExperimentosPawn.h"
+#include "TimerManager.h"
 
-// Sets default values
 AGasolinera::AGasolinera()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	//static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cylinder.Shape_Cylinder'"));
-	// Create the mesh component
-	mallaGasolinera = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Gasolinera"));
-//	mallaGasolinera->SetStaticMesh(ShipMesh.Object);
-	mallaGasolinera->SetupAttachment(RootComponent);
-	GetActorRelativeScale3D();
-	SetActorScale3D(FVector(2.0f, 2.0f, 2.0f));
-	RootComponent = mallaGasolinera;
+	auto MeshAsset =
+		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.Cube'"));
+	if (MeshAsset.Object != nullptr)
+	{
+		GetStaticMeshComponent()->SetStaticMesh(MeshAsset.Object);
+		GetStaticMeshComponent()->SetCollisionProfileName(UCollisionProfile::Pawn_ProfileName);
+	}
+	GetStaticMeshComponent()->SetMobility(EComponentMobility::Movable);
+	SetActorEnableCollision(true);
 }
 
-// Called when the game starts or when spawned
-void AGasolinera::BeginPlay()
+void AGasolinera::RecogerGasolinera()
 {
-	Super::BeginPlay();
-	
+	SetActorTickEnabled(false);
+	SetActorHiddenInGame(true);
+	SetActorEnableCollision(false);
 }
 
-// Called every frame
-void AGasolinera::Tick(float DeltaTime)
+void AGasolinera::SoltarGasolinera(FTransform TargetLocation)
 {
-	Super::Tick(DeltaTime);
-
+	SetActorTickEnabled(true);
+	SetActorHiddenInGame(false);
+	SetActorEnableCollision(true);
+	SetActorLocation(TargetLocation.GetLocation());
 }
-

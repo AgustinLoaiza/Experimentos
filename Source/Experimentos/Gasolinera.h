@@ -3,28 +3,30 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "Engine/StaticMeshActor.h"
+#include "TimerManager.h"
 #include "Gasolinera.generated.h"
 
+/**
+ * 
+ */
 UCLASS()
-class EXPERIMENTOS_API AGasolinera : public AActor
+class EXPERIMENTOS_API AGasolinera : public AStaticMeshActor
 {
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent* mallaGasolinera;
-
-public:	
-	// Sets default values for this actor's properties
+	UStaticMeshComponent* MeshGasolinera;
 	AGasolinera();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	virtual void RecogerGasolinera();
+	virtual void SoltarGasolinera(FTransform TargetLocation);
+	//virtual void Tick(float DeltaTime) override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	UPROPERTY()
+	float Velocidad;
+	UPROPERTY()
+	float TiempoTranscurrido;
+	UPROPERTY()
+	bool Verificar = 0;
 };

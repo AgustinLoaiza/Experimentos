@@ -15,9 +15,8 @@ void EmptyLinkFunctionForGeneratedCodeGasolinera() {}
 // Cross Module References
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_AGasolinera_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_AGasolinera();
-	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	ENGINE_API UClass* Z_Construct_UClass_AStaticMeshActor();
 	UPackage* Z_Construct_UPackage__Script_Experimentos();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void AGasolinera::StaticRegisterNativesAGasolinera()
 	{
@@ -33,34 +32,63 @@ void EmptyLinkFunctionForGeneratedCodeGasolinera() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_mallaGasolinera_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Velocidad_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_mallaGasolinera;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Velocidad;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TiempoTranscurrido_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TiempoTranscurrido;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Verificar_MetaData[];
+#endif
+		static void NewProp_Verificar_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_Verificar;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AGasolinera_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_AActor,
+		(UObject* (*)())Z_Construct_UClass_AStaticMeshActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_Experimentos,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGasolinera_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * \n */" },
+		{ "HideCategories", "Input" },
 		{ "IncludePath", "Gasolinera.h" },
 		{ "ModuleRelativePath", "Gasolinera.h" },
+		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGasolinera_Statics::NewProp_mallaGasolinera_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Projectile" },
-		{ "EditInline", "true" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGasolinera_Statics::NewProp_Velocidad_MetaData[] = {
+		{ "Comment", "//virtual void Tick(float DeltaTime) override;\n" },
+		{ "ModuleRelativePath", "Gasolinera.h" },
+		{ "ToolTip", "virtual void Tick(float DeltaTime) override;" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGasolinera_Statics::NewProp_Velocidad = { "Velocidad", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGasolinera, Velocidad), METADATA_PARAMS(Z_Construct_UClass_AGasolinera_Statics::NewProp_Velocidad_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGasolinera_Statics::NewProp_Velocidad_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGasolinera_Statics::NewProp_TiempoTranscurrido_MetaData[] = {
 		{ "ModuleRelativePath", "Gasolinera.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGasolinera_Statics::NewProp_mallaGasolinera = { "mallaGasolinera", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGasolinera, mallaGasolinera), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGasolinera_Statics::NewProp_mallaGasolinera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGasolinera_Statics::NewProp_mallaGasolinera_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGasolinera_Statics::NewProp_TiempoTranscurrido = { "TiempoTranscurrido", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGasolinera, TiempoTranscurrido), METADATA_PARAMS(Z_Construct_UClass_AGasolinera_Statics::NewProp_TiempoTranscurrido_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGasolinera_Statics::NewProp_TiempoTranscurrido_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGasolinera_Statics::NewProp_Verificar_MetaData[] = {
+		{ "ModuleRelativePath", "Gasolinera.h" },
+	};
+#endif
+	void Z_Construct_UClass_AGasolinera_Statics::NewProp_Verificar_SetBit(void* Obj)
+	{
+		((AGasolinera*)Obj)->Verificar = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGasolinera_Statics::NewProp_Verificar = { "Verificar", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGasolinera), &Z_Construct_UClass_AGasolinera_Statics::NewProp_Verificar_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGasolinera_Statics::NewProp_Verificar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGasolinera_Statics::NewProp_Verificar_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGasolinera_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGasolinera_Statics::NewProp_mallaGasolinera,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGasolinera_Statics::NewProp_Velocidad,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGasolinera_Statics::NewProp_TiempoTranscurrido,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGasolinera_Statics::NewProp_Verificar,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGasolinera_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGasolinera>::IsAbstract,
@@ -89,7 +117,7 @@ void EmptyLinkFunctionForGeneratedCodeGasolinera() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGasolinera, 2391641840);
+	IMPLEMENT_CLASS(AGasolinera, 475736393);
 	template<> EXPERIMENTOS_API UClass* StaticClass<AGasolinera>()
 	{
 		return AGasolinera::StaticClass();

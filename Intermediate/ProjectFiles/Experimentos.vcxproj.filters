@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Experimentos.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{8D6D21FE-AAF4-4622-896E-70AA6DDE3628}</UniqueIdentifier>
+      <UniqueIdentifier>{95F657AD-CE5D-4476-B236-B951D7ED5890}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Experimentos.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{7909BC1C-F458-46C9-9926-E33F353AFD84}</UniqueIdentifier>
+      <UniqueIdentifier>{4C72953E-0B6C-40CA-81D1-520B88349FA5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Experimentos">
-      <UniqueIdentifier>{D2208BD2-6E95-4F00-82C1-D363715954ED}</UniqueIdentifier>
+      <UniqueIdentifier>{998F1F35-88B9-45D6-8576-61A2059AC778}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Experimentos\Armeria.cpp">
       <Filter>Source\Experimentos</Filter>
@@ -68,6 +68,18 @@
       <Filter>Source\Experimentos</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Experimentos\ComponenteChino.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\ComponenteGasolinera.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\ComponenteGasolinera.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\ComponenteMedico.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\ComponenteMedico.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Experimentos\ComponenteMotor.cpp">
@@ -137,6 +149,12 @@
       <Filter>Source\Experimentos</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Experimentos\Mecanico.h">
+      <Filter>Source\Experimentos</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Experimentos\Medico.cpp">
+      <Filter>Source\Experimentos</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Experimentos\Medico.h">
       <Filter>Source\Experimentos</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Experimentos\Motor.cpp">

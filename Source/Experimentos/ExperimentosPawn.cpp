@@ -52,6 +52,7 @@ AExperimentosPawn::AExperimentosPawn()
 	bCanFire = true;
 
 	//Inicializacion de los componentes de actor de los Items
+	Gasolinera = CreateDefaultSubobject<UComponenteGasolinera>("Gasolinera");
 	Motor= CreateDefaultSubobject<UComponenteMotor>("Motor");
 	Municion = CreateDefaultSubobject<UComponenteMunicion>("Municion"); 
 	Armeria = CreateDefaultSubobject<UComponenteArmeria>("Armeria");
@@ -148,6 +149,28 @@ void AExperimentosPawn::ShotTimerExpired()
 	bCanFire = true;
 }
 
+//Inicalizacion de las funciones de recoger y soltar Gasolinera
+void AExperimentosPawn::DropItemGasolinera()
+{
+	if (Gasolinera->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AGasolinera* Item = Gasolinera->CurrentInventory.Last();
+	Gasolinera->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->SoltarGasolinera(PutDownLocation);
+}
+
+void AExperimentosPawn::TakeItemGasolinera(AGasolinera* InventoryItem)
+{
+	InventoryItem->RecogerGasolinera();
+	Gasolinera->AddToInventory(InventoryItem);
+}
+
 //Inicalizacion de las funciones de recoger y soltar Motor
 void AExperimentosPawn::DropItem()
 {
@@ -240,6 +263,11 @@ void AExperimentosPawn::TakeItemChino(AComponenteChino* InventoryItem)
 //Notificacion del choque con los Items
 void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
+	AGasolinera* InventoryItemGasolinera = Cast<AGasolinera>(Other);
+	if (InventoryItemGasolinera != nullptr)
+	{
+		TakeItemGasolinera(InventoryItemGasolinera);
+	}
 	AMotor* InventoryItem = Cast<AMotor>(Other);
 	if (InventoryItem != nullptr)
 	{
