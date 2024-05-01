@@ -5,6 +5,7 @@
 #include "Gasolinera.h"
 #include "Motor.h"
 #include "Municion.h"
+#include "Armeria.h"
 #include "ComponenteChino.h"
 
 // Sets default values
@@ -82,6 +83,13 @@ void ABoqueron::BuildPowerUp()
 	}
 	else if (PowerUp == "Armeria")
 	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionArmeria = UbicacionBoqueron + FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AArmeria>(ubicacionArmeria, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Armeria"));
+		}
 
 	}
 	else if (PowerUp == "ComponenteChino")

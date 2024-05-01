@@ -6,6 +6,7 @@
 #include "Mecanico.h"
 #include "Pirata.h"
 #include "Artillero.h"
+#include "Armero.h"
 #include "HansKundt.h"
 #include "Boqueron.h"
 
@@ -33,9 +34,13 @@ void AExperimentosGameMode::BeginPlay()
 	HansKundt->SetObrero(Artillero);
 	HansKundt->ConstruirBoqueron(FVector(-1400.0f, 1000.0f, 215.0f));
 
+	Armero= GetWorld()->SpawnActor<AArmero>(AArmero::StaticClass());
+	HansKundt->SetObrero(Armero);
+	HansKundt->ConstruirBoqueron(FVector(-1500.0f, 900.0f, 215.0f));
+
 	Pirata= GetWorld()->SpawnActor<APirata>(APirata::StaticClass());
 	HansKundt->SetObrero(Pirata);
-	HansKundt->ConstruirBoqueron(FVector(-1500.0f, 900.0f, 215.0f));
+	HansKundt->ConstruirBoqueron(FVector(-1600.0f, 800.0f, 215.0f));
 
 	ABoqueron* Boqueron = HansKundt->GetBoqueron();
 	Boqueron->Caracteristicas();

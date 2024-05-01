@@ -13,6 +13,16 @@ UComponenteArmeria::UComponenteArmeria()
 	// ...
 }
 
+int32 UComponenteArmeria::AddToInventory(AArmeria* ActorToAdd)
+{
+	return CurrentInventory.Add(ActorToAdd); 
+}
+
+void UComponenteArmeria::RemoveFromInventory(AArmeria* ActorToRemove)
+{
+	CurrentInventory.Remove(ActorToRemove);
+}
+
 
 // Called when the game starts
 void UComponenteArmeria::BeginPlay()

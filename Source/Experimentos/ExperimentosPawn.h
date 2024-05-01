@@ -10,9 +10,13 @@
 //Incluimos todo relacionado a Municion
 #include "ComponenteMunicion.h"
 #include "Municion.h"
+//Incluimos todo relacionado a Armeria
+#include "ComponenteArmeria.h"
+#include "Armeria.h"
 //Incluimos todo relacionado al ComponenteChino
 #include "MagiaChina.h"
 #include "ComponenteChino.h"
+
 #include "ExperimentosPawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -96,7 +100,6 @@ public:
 	UFUNCTION()
 	void TakeItem(AMotor* InventoryItem);
 	
-
 	//Interaccion de Pawn con la Municion
 	UPROPERTY()
 	UComponenteMunicion* Municion;
@@ -104,6 +107,14 @@ public:
 	void DropItemMunicion();
 	UFUNCTION()
 	void TakeItemMunicion(AMunicion* InventoryItem);
+
+	//Interaccion de Pawn con la Armeria
+	UPROPERTY()
+	UComponenteArmeria* Armeria;
+	UFUNCTION()
+	void DropItemArmeria();
+	UFUNCTION()
+	void TakeItemArmeria(AArmeria* InventoryItem);
 
 	//Interaccion de Pawn con el ComponenteChino
 	UPROPERTY()

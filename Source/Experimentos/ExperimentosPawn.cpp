@@ -54,6 +54,7 @@ AExperimentosPawn::AExperimentosPawn()
 	//Inicializacion de los componentes de actor de los Items
 	Motor= CreateDefaultSubobject<UComponenteMotor>("Motor");
 	Municion = CreateDefaultSubobject<UComponenteMunicion>("Municion"); 
+	Armeria = CreateDefaultSubobject<UComponenteArmeria>("Armeria");
 	ComponenteChino = CreateDefaultSubobject<UMagiaChina>("ComponenteChino"); 
 }
 
@@ -191,6 +192,28 @@ void AExperimentosPawn::TakeItemMunicion(AMunicion* InventoryItem)
 	Municion->AddToInventory(InventoryItem);
 }
 
+//Inicalizacion de las funciones de recoger y soltar Armeria
+void AExperimentosPawn::DropItemArmeria()
+{
+	if (Armeria->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AArmeria* Item = Armeria->CurrentInventory.Last();
+	Armeria->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->SoltarArmeria(PutDownLocation);
+}
+
+void AExperimentosPawn::TakeItemArmeria(AArmeria* InventoryItem)
+{
+	InventoryItem->AgregarArmeria();
+	Armeria->AddToInventory(InventoryItem);
+}
+
 //Inicalizacion de las funciones de recoger y soltar ComponenteChino
 void AExperimentosPawn::DropItemChino()
 {
@@ -228,6 +251,11 @@ void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Oth
 	{
 		TakeItemMunicion(InventoryItemMunicion);
 		cargador = 50;
+	}
+	AArmeria* InventoryItemArmeria = Cast<AArmeria>(Other);
+	if (InventoryItemArmeria != nullptr)
+	{
+		TakeItemArmeria(InventoryItemArmeria);
 	}
 	AComponenteChino* InventoryItemChino = Cast<AComponenteChino>(Other);
 	if (InventoryItemChino != nullptr)

@@ -16,6 +16,10 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ComponenteMu
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Municion.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Municion.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ComponenteMunicion.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ComponenteArmeria.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Armeria.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Armeria.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ComponenteArmeria.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\MagiaChina.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ComponenteChino.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\FuncionChina.h

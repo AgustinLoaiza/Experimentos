@@ -19,6 +19,7 @@ private:
 	class ASurtidor* Surtidor;
 	class AMecanico* Mecanico;
 	class AArtillero* Artillero;
+	class AArmero* Armero;
 	class APirata* Pirata;
 	class AHansKundt* HansKundt;
 

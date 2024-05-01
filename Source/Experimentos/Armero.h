@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Obrero.h"
 #include "Armero.generated.h"
 
 UCLASS()
-class EXPERIMENTOS_API AArmero : public AActor
+class EXPERIMENTOS_API AArmero : public AActor, public IObrero
 {
 	GENERATED_BODY()
 	
@@ -22,5 +23,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	virtual void BuildBoqueron(FVector UbicacionBoqueron) override;
+	virtual void BuildMesh() override;
+	virtual void BuildPowerUps() override;
+	class UStaticMesh* Motor = LoadObject<UStaticMesh>(nullptr, TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Torus.Shape_Torus'"));
+	virtual class ABoqueron* GetBoqueron() override;
+	ABoqueron* Boqueron;
 
 };

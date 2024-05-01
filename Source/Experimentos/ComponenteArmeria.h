@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Armeria.h"
 #include "ComponenteArmeria.generated.h"
 
 
@@ -15,6 +16,13 @@ class EXPERIMENTOS_API UComponenteArmeria : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UComponenteArmeria();
+
+	UPROPERTY()
+	TArray<AArmeria*> CurrentInventory;
+	UFUNCTION()
+	int32 AddToInventory(AArmeria* ActorToAdd);
+	UFUNCTION()
+	void RemoveFromInventory(AArmeria* ActorToRemove);
 
 protected:
 	// Called when the game starts

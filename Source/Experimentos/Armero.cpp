@@ -2,6 +2,8 @@
 
 
 #include "Armero.h"
+#include "Armeria.h"
+#include "Boqueron.h"
 
 // Sets default values
 AArmero::AArmero()
@@ -23,5 +25,29 @@ void AArmero::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AArmero::BuildBoqueron(FVector UbicacionBoqueron)
+{
+	Boqueron = GetWorld()->SpawnActor<ABoqueron>(ABoqueron::StaticClass(), UbicacionBoqueron, FRotator::ZeroRotator);
+	Boqueron->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Estancia():Lodging is NULL, make sure it's initialized.")); return; }
+}
+
+void AArmero::BuildMesh()
+{
+	Boqueron->MeshBoqueron->SetStaticMesh(Motor);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
+}
+
+void AArmero::BuildPowerUps()
+{
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Armero")); return; }
+	Boqueron->SetPowerUp("Armeria");
+}
+
+ABoqueron* AArmero::GetBoqueron()
+{
+	return Boqueron;
 }
 
