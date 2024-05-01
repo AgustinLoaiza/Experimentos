@@ -13,6 +13,16 @@ UComponenteMedico::UComponenteMedico()
 	// ...
 }
 
+int32 UComponenteMedico::AddToInventory(ACentroMedico* ActorToAdd)
+{
+	return CurrentInventory.Add(ActorToAdd);
+}
+
+void UComponenteMedico::RemoveFromInventory(ACentroMedico* ActorToRemove)
+{
+	CurrentInventory.Remove(ActorToRemove);
+}
+
 
 // Called when the game starts
 void UComponenteMedico::BeginPlay()

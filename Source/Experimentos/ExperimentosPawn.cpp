@@ -53,6 +53,7 @@ AExperimentosPawn::AExperimentosPawn()
 
 	//Inicializacion de los componentes de actor de los Items
 	Gasolinera = CreateDefaultSubobject<UComponenteGasolinera>("Gasolinera");
+	CentroMedico= CreateDefaultSubobject<UComponenteMedico>("CentroMedico");
 	Motor= CreateDefaultSubobject<UComponenteMotor>("Motor");
 	Municion = CreateDefaultSubobject<UComponenteMunicion>("Municion"); 
 	Armeria = CreateDefaultSubobject<UComponenteArmeria>("Armeria");
@@ -164,11 +165,32 @@ void AExperimentosPawn::DropItemGasolinera()
 	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
 	Item->SoltarGasolinera(PutDownLocation);
 }
-
 void AExperimentosPawn::TakeItemGasolinera(AGasolinera* InventoryItem)
 {
 	InventoryItem->RecogerGasolinera();
 	Gasolinera->AddToInventory(InventoryItem);
+}
+
+//Inicalizacion de las funciones de recoger y soltar CentroMedico
+void AExperimentosPawn::DropItemCentroMedico()
+{
+	if (CentroMedico->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	ACentroMedico* Item = CentroMedico->CurrentInventory.Last();
+	CentroMedico->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->SoltarCentroMedico(PutDownLocation);
+}
+
+void AExperimentosPawn::TakeItemCentroMedico(ACentroMedico* InventoryItem)
+{
+	InventoryItem->AgarrarCentroMedico();
+	CentroMedico->AddToInventory(InventoryItem);
 }
 
 //Inicalizacion de las funciones de recoger y soltar Motor
@@ -267,6 +289,11 @@ void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Oth
 	if (InventoryItemGasolinera != nullptr)
 	{
 		TakeItemGasolinera(InventoryItemGasolinera);
+	}
+	ACentroMedico* InventoryItemCentroMedico = Cast<ACentroMedico>(Other);
+	if (InventoryItemCentroMedico != nullptr)
+	{
+		TakeItemCentroMedico(InventoryItemCentroMedico);
 	}
 	AMotor* InventoryItem = Cast<AMotor>(Other);
 	if (InventoryItem != nullptr)

@@ -18,6 +18,10 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Gasolinera.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ComponenteGasolinera.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ComponenteMedico.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\CentroMedico.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\CentroMedico.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ComponenteMedico.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ComponenteMotor.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Motor.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Motor.generated.h
@@ -41,6 +45,8 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Surtidor.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Obrero.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Obrero.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Surtidor.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Medico.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Medico.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Mecanico.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Mecanico.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Pirata.h

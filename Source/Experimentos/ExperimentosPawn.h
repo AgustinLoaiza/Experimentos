@@ -7,6 +7,9 @@
 //Incluimos todo relacionado a Gasolinera
 #include "ComponenteGasolinera.h"
 #include "Gasolinera.h"
+//Incluimos todo relacionado a CentroMedico
+#include "ComponenteMedico.h"
+#include "CentroMedico.h"
 //Incluimos todo relacionado a Motor
 #include "ComponenteMotor.h"
 #include "Motor.h"
@@ -102,6 +105,14 @@ public:
 	void DropItemGasolinera();
 	UFUNCTION()
 	void TakeItemGasolinera(AGasolinera* InventoryItem);
+
+	//Interaccion de Pawn con el CentroMedico
+	UPROPERTY()
+	UComponenteMedico* CentroMedico;
+	UFUNCTION()
+	void DropItemCentroMedico();
+	UFUNCTION()
+	void TakeItemCentroMedico(ACentroMedico* InventoryItem);
 
 	//Interaccion de Pawn con el Motor
 	UPROPERTY()

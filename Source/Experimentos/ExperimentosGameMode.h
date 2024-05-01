@@ -17,6 +17,7 @@ public:
 private:
 
 	class ASurtidor* Surtidor;
+	class AMedico* Medico;
 	class AMecanico* Mecanico;
 	class AArtillero* Artillero;
 	class AArmero* Armero;

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "CentroMedico.h"
 #include "ComponenteMedico.generated.h"
 
 
@@ -15,6 +16,13 @@ class EXPERIMENTOS_API UComponenteMedico : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UComponenteMedico();
+
+	UPROPERTY()
+	TArray<ACentroMedico*> CurrentInventory;
+	UFUNCTION()
+	int32 AddToInventory(ACentroMedico* ActorToAdd);
+	UFUNCTION()
+	void RemoveFromInventory(ACentroMedico* ActorToRemove);
 
 protected:
 	// Called when the game starts

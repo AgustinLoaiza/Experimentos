@@ -3,6 +3,7 @@
 #include "ExperimentosGameMode.h"
 #include "ExperimentosPawn.h"
 #include "Surtidor.h"
+#include "Medico.h"
 #include "Mecanico.h"
 #include "Pirata.h"
 #include "Artillero.h"
@@ -25,6 +26,10 @@ void AExperimentosGameMode::BeginPlay()
 	Surtidor= GetWorld()->SpawnActor<ASurtidor>(ASurtidor::StaticClass());
 	HansKundt->SetObrero(Surtidor);
 	HansKundt->ConstruirBoqueron(FVector(-1100.0f, 1300.0f, 215.0f));
+
+	Medico= GetWorld()->SpawnActor<AMedico>(AMedico::StaticClass());
+	HansKundt->SetObrero(Medico);
+	HansKundt->ConstruirBoqueron(FVector(-1200.0f, 1200.0f, 215.0f));
 
 	Mecanico = GetWorld()->SpawnActor<AMecanico>(AMecanico::StaticClass()); 
 	HansKundt->SetObrero(Mecanico); 

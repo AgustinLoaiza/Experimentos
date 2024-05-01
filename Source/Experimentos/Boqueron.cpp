@@ -3,6 +3,7 @@
 
 #include "Boqueron.h"
 #include "Gasolinera.h"
+#include "CentroMedico.h"
 #include "Motor.h"
 #include "Municion.h"
 #include "Armeria.h"
@@ -59,6 +60,16 @@ void ABoqueron::BuildPowerUp()
 			FVector ubicacionGasolinera = UbicacionBoqueron+FVector(-100.0f, 300.0f, 0.0f);
 			World->SpawnActor<AGasolinera>(ubicacionGasolinera, FRotator::ZeroRotator);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Gasolinera"));
+		}
+	}
+	else if (PowerUp == "CentroMedico")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionCentroMedico = UbicacionBoqueron+FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<ACentroMedico>(ubicacionCentroMedico, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Centro Medico"));
 		}
 	}
 	else if (PowerUp == "Motor")

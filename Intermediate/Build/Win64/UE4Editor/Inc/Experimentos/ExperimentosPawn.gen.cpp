@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_AMotor_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_AArmeria_NoRegister();
+	EXPERIMENTOS_API UClass* Z_Construct_UClass_ACentroMedico_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_AComponenteChino_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_AGasolinera_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_AMunicion_NoRegister();
@@ -31,6 +32,7 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_UComponenteGasolinera_NoRegister();
+	EXPERIMENTOS_API UClass* Z_Construct_UClass_UComponenteMedico_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_UComponenteMotor_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_UComponenteMunicion_NoRegister();
 	EXPERIMENTOS_API UClass* Z_Construct_UClass_UComponenteArmeria_NoRegister();
@@ -111,6 +113,21 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		P_THIS->DropItem();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AExperimentosPawn::execTakeItemCentroMedico)
+	{
+		P_GET_OBJECT(ACentroMedico,Z_Param_InventoryItem);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TakeItemCentroMedico(Z_Param_InventoryItem);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AExperimentosPawn::execDropItemCentroMedico)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DropItemCentroMedico();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AExperimentosPawn::execTakeItemGasolinera)
 	{
 		P_GET_OBJECT(AGasolinera,Z_Param_InventoryItem);
@@ -132,12 +149,14 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "DropItem", &AExperimentosPawn::execDropItem },
 			{ "DropItemArmeria", &AExperimentosPawn::execDropItemArmeria },
+			{ "DropItemCentroMedico", &AExperimentosPawn::execDropItemCentroMedico },
 			{ "DropItemChino", &AExperimentosPawn::execDropItemChino },
 			{ "DropItemGasolinera", &AExperimentosPawn::execDropItemGasolinera },
 			{ "DropItemMunicion", &AExperimentosPawn::execDropItemMunicion },
 			{ "NotifyHit", &AExperimentosPawn::execNotifyHit },
 			{ "TakeItem", &AExperimentosPawn::execTakeItem },
 			{ "TakeItemArmeria", &AExperimentosPawn::execTakeItemArmeria },
+			{ "TakeItemCentroMedico", &AExperimentosPawn::execTakeItemCentroMedico },
 			{ "TakeItemChino", &AExperimentosPawn::execTakeItemChino },
 			{ "TakeItemGasolinera", &AExperimentosPawn::execTakeItemGasolinera },
 			{ "TakeItemMunicion", &AExperimentosPawn::execTakeItemMunicion },
@@ -185,6 +204,28 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AExperimentosPawn_DropItemArmeria_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AExperimentosPawn_DropItemCentroMedico_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AExperimentosPawn_DropItemCentroMedico_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ExperimentosPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AExperimentosPawn_DropItemCentroMedico_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AExperimentosPawn, nullptr, "DropItemCentroMedico", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AExperimentosPawn_DropItemCentroMedico_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AExperimentosPawn_DropItemCentroMedico_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AExperimentosPawn_DropItemCentroMedico()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AExperimentosPawn_DropItemCentroMedico_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -409,6 +450,38 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics
+	{
+		struct ExperimentosPawn_eventTakeItemCentroMedico_Parms
+		{
+			ACentroMedico* InventoryItem;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InventoryItem;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::NewProp_InventoryItem = { "InventoryItem", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ExperimentosPawn_eventTakeItemCentroMedico_Parms, InventoryItem), Z_Construct_UClass_ACentroMedico_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::NewProp_InventoryItem,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ExperimentosPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AExperimentosPawn, nullptr, "TakeItemCentroMedico", nullptr, nullptr, sizeof(ExperimentosPawn_eventTakeItemCentroMedico_Parms), Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AExperimentosPawn_TakeItemChino_Statics
 	{
 		struct ExperimentosPawn_eventTakeItemChino_Parms
@@ -549,6 +622,10 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Gasolinera;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CentroMedico_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CentroMedico;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Motor_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Motor;
@@ -575,12 +652,14 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AExperimentosPawn_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AExperimentosPawn_DropItem, "DropItem" }, // 1855372558
 		{ &Z_Construct_UFunction_AExperimentosPawn_DropItemArmeria, "DropItemArmeria" }, // 3790927936
+		{ &Z_Construct_UFunction_AExperimentosPawn_DropItemCentroMedico, "DropItemCentroMedico" }, // 3831057786
 		{ &Z_Construct_UFunction_AExperimentosPawn_DropItemChino, "DropItemChino" }, // 1624559457
 		{ &Z_Construct_UFunction_AExperimentosPawn_DropItemGasolinera, "DropItemGasolinera" }, // 1872917378
 		{ &Z_Construct_UFunction_AExperimentosPawn_DropItemMunicion, "DropItemMunicion" }, // 2224321528
 		{ &Z_Construct_UFunction_AExperimentosPawn_NotifyHit, "NotifyHit" }, // 3470614060
 		{ &Z_Construct_UFunction_AExperimentosPawn_TakeItem, "TakeItem" }, // 2649405094
 		{ &Z_Construct_UFunction_AExperimentosPawn_TakeItemArmeria, "TakeItemArmeria" }, // 438209395
+		{ &Z_Construct_UFunction_AExperimentosPawn_TakeItemCentroMedico, "TakeItemCentroMedico" }, // 2843754901
 		{ &Z_Construct_UFunction_AExperimentosPawn_TakeItemChino, "TakeItemChino" }, // 549394279
 		{ &Z_Construct_UFunction_AExperimentosPawn_TakeItemGasolinera, "TakeItemGasolinera" }, // 491366205
 		{ &Z_Construct_UFunction_AExperimentosPawn_TakeItemMunicion, "TakeItemMunicion" }, // 1659306174
@@ -673,6 +752,15 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Gasolinera = { "Gasolinera", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AExperimentosPawn, Gasolinera), Z_Construct_UClass_UComponenteGasolinera_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Gasolinera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Gasolinera_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_CentroMedico_MetaData[] = {
+		{ "Comment", "//Interaccion de Pawn con el CentroMedico\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ExperimentosPawn.h" },
+		{ "ToolTip", "Interaccion de Pawn con el CentroMedico" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_CentroMedico = { "CentroMedico", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AExperimentosPawn, CentroMedico), Z_Construct_UClass_UComponenteMedico_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_CentroMedico_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_CentroMedico_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Motor_MetaData[] = {
 		{ "Comment", "//Interaccion de Pawn con el Motor\n" },
 		{ "EditInline", "true" },
@@ -717,6 +805,7 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_MoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_FireSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Gasolinera,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_CentroMedico,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Motor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Municion,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExperimentosPawn_Statics::NewProp_Armeria,
@@ -749,7 +838,7 @@ void EmptyLinkFunctionForGeneratedCodeExperimentosPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AExperimentosPawn, 469833799);
+	IMPLEMENT_CLASS(AExperimentosPawn, 3154690660);
 	template<> EXPERIMENTOS_API UClass* StaticClass<AExperimentosPawn>()
 	{
 		return AExperimentosPawn::StaticClass();
