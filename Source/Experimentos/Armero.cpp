@@ -36,7 +36,7 @@ void AArmero::BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion)
 
 void AArmero::BuildMesh()
 {
-	Boqueron->MeshBoqueron->SetStaticMesh(Motor);
+	Boqueron->MeshBoqueron->SetStaticMesh(Armeria);
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 

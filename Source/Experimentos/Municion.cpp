@@ -13,7 +13,7 @@ AMunicion::AMunicion()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	auto MeshAsset =
-		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Game/Mallas/d09120e3dc5f_Caja_de_municion__3.d09120e3dc5f_Caja_de_municion__3'"));
+		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
 	if (MeshAsset.Object != nullptr)
 	{
 		GetStaticMeshComponent()->SetStaticMesh(MeshAsset.Object);

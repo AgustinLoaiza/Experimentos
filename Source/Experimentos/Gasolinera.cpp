@@ -13,7 +13,7 @@ AGasolinera::AGasolinera()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	auto MeshAsset =
-		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Game/Mallas/bb04ddf71349_Gasolinera__3d_asse.bb04ddf71349_Gasolinera__3d_asse'"));
+		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cylinder.Shape_Cylinder'"));
 	if (MeshAsset.Object != nullptr)
 	{
 		GetStaticMeshComponent()->SetStaticMesh(MeshAsset.Object);

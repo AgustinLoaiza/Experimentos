@@ -13,7 +13,7 @@ ACentroMedico::ACentroMedico()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	auto MeshAsset =
-		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Game/Mallas/d7be10ec2c2b_Hospital__3d_asset_.d7be10ec2c2b_Hospital__3d_asset_'"));
+		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_NarrowCapsule.Shape_NarrowCapsule'"));
 	if (MeshAsset.Object != nullptr)
 	{
 		GetStaticMeshComponent()->SetStaticMesh(MeshAsset.Object);

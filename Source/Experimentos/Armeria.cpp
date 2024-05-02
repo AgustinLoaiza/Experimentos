@@ -13,7 +13,7 @@ AArmeria::AArmeria()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	auto MeshAsset =
-		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Game/Mallas/916f25262f4d_Low_poly_cannon__st.916f25262f4d_Low_poly_cannon__st'"));
+		ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Torus.Shape_Torus'"));
 	if (MeshAsset.Object != nullptr)
 	{
 		GetStaticMeshComponent()->SetStaticMesh(MeshAsset.Object);
