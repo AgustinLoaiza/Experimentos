@@ -21,12 +21,4 @@ public:
 
 	virtual void RecogerGasolinera();
 	virtual void SoltarGasolinera(FTransform TargetLocation);
-	//virtual void Tick(float DeltaTime) override;
-
-	UPROPERTY()
-	float Velocidad;
-	UPROPERTY()
-	float TiempoTranscurrido;
-	UPROPERTY()
-	bool Verificar = 0;
 };

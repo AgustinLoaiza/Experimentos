@@ -21,9 +21,6 @@ AComponenteChino::AComponenteChino()
 	}
 	GetStaticMeshComponent()->SetMobility(EComponentMobility::Movable);
 	SetActorEnableCollision(true);
-
-	Velocidad = 100.0f;
-	TiempoTranscurrido = 0;
 }
 
 void AComponenteChino::ComprarComponente()

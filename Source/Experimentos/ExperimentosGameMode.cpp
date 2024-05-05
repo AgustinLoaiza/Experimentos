@@ -24,7 +24,7 @@ void AExperimentosGameMode::BeginPlay()
 
 	FVector UbicacionObjeto = FVector(500.0f, 700.0f, 250.0f);
 
-	HansKundt = GetWorld()->SpawnActor<AHansKundt>(AHansKundt::StaticClass());
+	HansKundt = GetWorld()->SpawnActor<AHansKundt>(AHansKundt::StaticClass()); //StaticCalss quiere decir que esto es una clase de Unreal, si no hay no va a saber de donde esta sacando
 
 	Surtidor= GetWorld()->SpawnActor<ASurtidor>(ASurtidor::StaticClass());
 	HansKundt->SetObrero(Surtidor);

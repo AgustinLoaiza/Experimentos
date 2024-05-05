@@ -84,11 +84,14 @@ public:
 	//Le damos un cargador a nuestra Nave
 	int32 cargador = 50;
 
-	//Le damos una vida a nuestra Nave
+	//Le damos vidas a nuestra Nave
 	int32 vida = 3;
 
 	//Le damos Combustible a la nave
 	int32 energia = 100;
+
+	//Llave para ingresar al codigo de disparo multiple
+	bool DisparoMultiple = false;
 
 private:
 
@@ -146,7 +149,6 @@ public:
 	void DropItemArmeria();
 	UFUNCTION()
 	void TakeItemArmeria(AArmeria* InventoryItem);
-	bool DisparoMultiple = false;
 
 	//Interaccion de Pawn con el ComponenteChino
 	UPROPERTY()

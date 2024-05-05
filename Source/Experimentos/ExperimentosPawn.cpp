@@ -107,7 +107,7 @@ void AExperimentosPawn::Tick(float DeltaSeconds)
 	// Try and fire a shot
 	FireShot(FireDirection);
 
-	//Actualizamos la vida de la nave
+	//Logica de administracion de vida y energia
 
 	if (energia<=0)
 	{
@@ -115,7 +115,9 @@ void AExperimentosPawn::Tick(float DeltaSeconds)
 		vida--;
 		SetActorLocation(FVector(0.0f, 0.0f, 250.0f));
 		energia = 100;
-		cargador=50;
+		cargador = 50;
+		MoveSpeed = 1000.0f;
+		DisparoMultiple = false;
 	}
 	if (vida<=0)
 	{

@@ -21,13 +21,5 @@ public:
 
 	virtual void AgarrarCentroMedico();
 	virtual void SoltarCentroMedico(FTransform TargetLocation);
-	//virtual void Tick(float DeltaTime) override;
-
-	UPROPERTY()
-	float Velocidad;
-	UPROPERTY()
-	float TiempoTranscurrido;
-	UPROPERTY()
-	bool Verificar = 0;
 	
 };

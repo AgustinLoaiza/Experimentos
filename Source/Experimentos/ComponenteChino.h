@@ -23,14 +23,6 @@ public:
 
 	virtual void ComprarComponente();
 	virtual void UtilizarComponente(FTransform TargetLocation);
-	//virtual void Tick(float DeltaTime) override;
-
-	UPROPERTY()
-	float Velocidad;
-	UPROPERTY()
-	float TiempoTranscurrido;
-	UPROPERTY()
-	bool Verificar = 0;
 
 	UFuncionChina* FuncionChina;
 };
