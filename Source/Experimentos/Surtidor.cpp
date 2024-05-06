@@ -46,6 +46,14 @@ void ASurtidor::BuildPowerUps()
 	Boqueron->SetPowerUp("Gasolinera");
 }
 
+void ASurtidor::FuncionEspecial()
+{
+}
+
+void ASurtidor::BuildEscudo()
+{
+}
+
 ABoqueron* ASurtidor::GetBoqueron()
 {
 	return Boqueron;

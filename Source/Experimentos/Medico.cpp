@@ -45,6 +45,14 @@ void AMedico::BuildPowerUps()
 	Boqueron->SetPowerUp("CentroMedico");
 }
 
+void AMedico::FuncionEspecial()
+{
+}
+
+void AMedico::BuildEscudo()
+{
+}
+
 ABoqueron* AMedico::GetBoqueron()
 {
 	return Boqueron;

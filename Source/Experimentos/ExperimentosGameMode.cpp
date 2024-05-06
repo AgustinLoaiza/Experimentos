@@ -28,7 +28,7 @@ void AExperimentosGameMode::BeginPlay()
 
 	Surtidor= GetWorld()->SpawnActor<ASurtidor>(ASurtidor::StaticClass());
 	HansKundt->SetObrero(Surtidor);
-	HansKundt->ConstruirBoqueron(FVector(-1100.0f, 1300.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
+	HansKundt->ConstruirBoqueron(FVector(1100.0f, 1300.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
 
 	Medico= GetWorld()->SpawnActor<AMedico>(AMedico::StaticClass());
 	HansKundt->SetObrero(Medico);
@@ -49,6 +49,7 @@ void AExperimentosGameMode::BeginPlay()
 	Pirata= GetWorld()->SpawnActor<APirata>(APirata::StaticClass());
 	HansKundt->SetObrero(Pirata);
 	HansKundt->ConstruirBoqueron(FVector(-1600.0f, 800.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
+
 
 	ABoqueron* Boqueron = HansKundt->GetBoqueron();
 	Boqueron->Caracteristicas();

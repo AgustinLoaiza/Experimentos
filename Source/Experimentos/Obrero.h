@@ -25,5 +25,7 @@ public:
 	virtual void BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion) = 0; 
 	virtual void BuildMesh() = 0;
 	virtual void BuildPowerUps() = 0;
+	virtual void FuncionEspecial() = 0;
+	virtual void BuildEscudo() = 0;
 	virtual class ABoqueron* GetBoqueron() = 0;
 };

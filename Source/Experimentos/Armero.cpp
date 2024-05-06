@@ -46,6 +46,14 @@ void AArmero::BuildPowerUps()
 	Boqueron->SetPowerUp("Armeria");
 }
 
+void AArmero::FuncionEspecial()
+{
+}
+
+void AArmero::BuildEscudo()
+{
+}
+
 ABoqueron* AArmero::GetBoqueron()
 {
 	return Boqueron;

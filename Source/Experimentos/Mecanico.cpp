@@ -47,6 +47,14 @@ void AMecanico::BuildPowerUps()
 	Boqueron->SetPowerUp("Motor");
 }
 
+void AMecanico::FuncionEspecial()
+{
+}
+
+void AMecanico::BuildEscudo()
+{
+}
+
 ABoqueron* AMecanico::GetBoqueron()
 {
 	return Boqueron;

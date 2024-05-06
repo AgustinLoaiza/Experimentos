@@ -50,6 +50,14 @@ void ABoqueron::SetPowerUp(FString _PowerUp)
 	PowerUp = _PowerUp; 
 }
 
+void ABoqueron::SetFuncionEspecial()
+{
+}
+
+void ABoqueron::SetEscudo()
+{
+}
+
 void ABoqueron::BuildPowerUp()
 {
 	if (PowerUp == "Gasolinera")

@@ -38,6 +38,8 @@ public:
 
 	void SetMesh(UStaticMeshComponent* _MeshBoqueron);
 	void SetPowerUp(FString _PowerUp);
+	void SetFuncionEspecial();
+	void SetEscudo();
 	void BuildPowerUp();
 
 	void Caracteristicas();

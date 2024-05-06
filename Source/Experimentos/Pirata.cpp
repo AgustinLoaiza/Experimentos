@@ -46,6 +46,14 @@ void APirata::BuildPowerUps()
 	Boqueron->SetPowerUp("ComponenteChino");
 }
 
+void APirata::FuncionEspecial()
+{
+}
+
+void APirata::BuildEscudo()
+{
+}
+
 ABoqueron* APirata::GetBoqueron()
 {
 	return Boqueron;

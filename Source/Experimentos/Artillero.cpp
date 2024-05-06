@@ -46,6 +46,14 @@ void AArtillero::BuildPowerUps()
 	Boqueron->SetPowerUp("Municion");
 }
 
+void AArtillero::FuncionEspecial()
+{
+}
+
+void AArtillero::BuildEscudo()
+{
+}
+
 ABoqueron* AArtillero::GetBoqueron()
 {
 	return Boqueron;

@@ -1,0 +1,3 @@
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Development\Experimentos\Definitions.Experimentos.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Escudo.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Escudo.generated.h
