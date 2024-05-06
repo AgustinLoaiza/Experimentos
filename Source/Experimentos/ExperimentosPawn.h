@@ -24,6 +24,10 @@
 #include "ComponenteChino.h"
 //Incluimos el objeto
 #include "ObjetoPrueba.h"
+//Incluimos mas objetos que tendran Boqueron
+#include "Escudo.h"
+#include "MuroEspinas.h"
+#include "Disparador.h"
 
 #include "ExperimentosPawn.generated.h"
 

@@ -139,14 +139,55 @@ void ABoqueron::BuildPowerUp()
 
 void ABoqueron::BuildFuncionEspecial()
 {
+	if (Disparador=="Disparador")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionDisparador1 = UbicacionBoqueron + FVector(-300.0f, 300.0f, 0.0f);
+			FVector ubicacionDisparador2 = UbicacionBoqueron + FVector(-800.0f, 300.0f, 0.0f);
+			World->SpawnActor<ADisparador>(ubicacionDisparador1, FRotator::ZeroRotator);
+			World->SpawnActor<ADisparador>(ubicacionDisparador2, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Disparador"));
+		}
+
+	}
 }
 
 void ABoqueron::BuildEscudo()
 {
+	if (Escudo == "Escudo")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionEscudo1 = UbicacionBoqueron + FVector(-500.0f, 300.0f, 0.0f);
+			FVector ubicacionEscudo2 = UbicacionBoqueron + FVector(-600.0f, 300.0f, 0.0f);
+			FVector ubicacionEscudo3 = UbicacionBoqueron + FVector(-700.0f, 300.0f, 0.0f);
+			World->SpawnActor<AEscudo>(ubicacionEscudo1, FRotator::ZeroRotator);
+			World->SpawnActor<AEscudo>(ubicacionEscudo2, FRotator::ZeroRotator);
+			World->SpawnActor<AEscudo>(ubicacionEscudo3, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Escudo"));
+		}
+	}
 }
 
 void ABoqueron::BuildMuroEspinas()
 {
+	if (MuroEspinas == "MuroEspinas")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionMuroEspinas1 = UbicacionBoqueron + FVector(900.0f, 300.0f, 0.0f);
+			FVector ubicacionMuroEspinas2 = UbicacionBoqueron + FVector(-1000.0f, 300.0f, 0.0f);
+			FVector ubicacionMuroEspinas3 = UbicacionBoqueron + FVector(-1100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AMuroEspinas>(ubicacionMuroEspinas1, FRotator::ZeroRotator);
+			World->SpawnActor<AMuroEspinas>(ubicacionMuroEspinas2, FRotator::ZeroRotator);
+			World->SpawnActor<AMuroEspinas>(ubicacionMuroEspinas3, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Muro de Espinas"));
+		}
+	}
 }
 
 void ABoqueron::Caracteristicas()

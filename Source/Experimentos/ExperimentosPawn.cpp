@@ -315,13 +315,21 @@ void AExperimentosPawn::TakeItemChino(AComponenteChino* InventoryItem)
 //Notificacion del choque con los Items
 void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
+	//Colisiones con objetos
 	AObjetoPrueba* InventoryItemPrueba = Cast<AObjetoPrueba>(Other);
 	if (InventoryItemPrueba != nullptr)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia: " + FString::FromInt(energia)));
 		energia-=10;
 	}
+	AMuroEspinas* InventoryItemMuro = Cast<AMuroEspinas>(Other);
+	if (InventoryItemMuro != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Vida: " + FString::FromInt(vida)));
+		energia-=10;
+	}
 
+	//Colisiones con Items
 	AGasolinera* InventoryItemGasolinera = Cast<AGasolinera>(Other);
 	if (InventoryItemGasolinera != nullptr)
 	{
