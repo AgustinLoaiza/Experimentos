@@ -54,6 +54,10 @@ void APirata::BuildEscudo()
 {
 }
 
+void APirata::BuildMuroEspinas()
+{
+}
+
 ABoqueron* APirata::GetBoqueron()
 {
 	return Boqueron;

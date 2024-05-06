@@ -55,6 +55,10 @@ void AMecanico::BuildEscudo()
 {
 }
 
+void AMecanico::BuildMuroEspinas()
+{
+}
+
 ABoqueron* AMecanico::GetBoqueron()
 {
 	return Boqueron;

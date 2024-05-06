@@ -7,6 +7,9 @@
 #include "Motor.h"
 #include "Municion.h"
 #include "Armeria.h"
+#include "Disparador.h"
+#include "Escudo.h"
+#include "MuroEspinas.h"
 #include "ComponenteChino.h"
 
 // Sets default values
@@ -50,12 +53,19 @@ void ABoqueron::SetPowerUp(FString _PowerUp)
 	PowerUp = _PowerUp; 
 }
 
-void ABoqueron::SetFuncionEspecial()
+void ABoqueron::SetFuncionEspecial(FString _Disparador)
 {
+	Disparador = _Disparador;
 }
 
-void ABoqueron::SetEscudo()
+void ABoqueron::SetEscudo(FString _Escudo)
 {
+	Escudo = _Escudo;
+}
+
+void ABoqueron::SetMuroEspinas(FString _MuroEspinas)
+{
+	MuroEspinas = _MuroEspinas;
 }
 
 void ABoqueron::BuildPowerUp()
@@ -125,6 +135,18 @@ void ABoqueron::BuildPowerUp()
 	{
 		nullptr;
 	}
+}
+
+void ABoqueron::BuildFuncionEspecial()
+{
+}
+
+void ABoqueron::BuildEscudo()
+{
+}
+
+void ABoqueron::BuildMuroEspinas()
+{
 }
 
 void ABoqueron::Caracteristicas()

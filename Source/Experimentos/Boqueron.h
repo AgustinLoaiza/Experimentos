@@ -19,6 +19,12 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
 	FString PowerUp;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	FString Disparador;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	FString Escudo;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	FString MuroEspinas;
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
@@ -38,9 +44,13 @@ public:
 
 	void SetMesh(UStaticMeshComponent* _MeshBoqueron);
 	void SetPowerUp(FString _PowerUp);
-	void SetFuncionEspecial();
-	void SetEscudo();
+	void SetFuncionEspecial(FString _Disparador);
+	void SetEscudo(FString _Escudo);
+	void SetMuroEspinas(FString _MuroEspinas);
 	void BuildPowerUp();
+	void BuildFuncionEspecial();
+	void BuildEscudo();
+	void BuildMuroEspinas();
 
 	void Caracteristicas();
 

@@ -53,6 +53,10 @@ void AMedico::BuildEscudo()
 {
 }
 
+void AMedico::BuildMuroEspinas()
+{
+}
+
 ABoqueron* AMedico::GetBoqueron()
 {
 	return Boqueron;

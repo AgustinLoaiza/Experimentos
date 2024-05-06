@@ -38,6 +38,18 @@ void EmptyLinkFunctionForGeneratedCodeBoqueron() {}
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_PowerUp;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Disparador_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Disparador;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Escudo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Escudo;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MuroEspinas_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MuroEspinas;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshBoqueron_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshBoqueron;
@@ -64,6 +76,27 @@ void EmptyLinkFunctionForGeneratedCodeBoqueron() {}
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp = { "PowerUp", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, PowerUp), METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoqueron_Statics::NewProp_Disparador_MetaData[] = {
+		{ "Category", "Boqueron" },
+		{ "ModuleRelativePath", "Boqueron.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_Disparador = { "Disparador", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, Disparador), METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_Disparador_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_Disparador_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoqueron_Statics::NewProp_Escudo_MetaData[] = {
+		{ "Category", "Boqueron" },
+		{ "ModuleRelativePath", "Boqueron.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_Escudo = { "Escudo", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, Escudo), METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_Escudo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_Escudo_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoqueron_Statics::NewProp_MuroEspinas_MetaData[] = {
+		{ "Category", "Boqueron" },
+		{ "ModuleRelativePath", "Boqueron.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_MuroEspinas = { "MuroEspinas", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, MuroEspinas), METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_MuroEspinas_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_MuroEspinas_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron_MetaData[] = {
 		{ "Category", "Boqueron" },
 		{ "EditInline", "true" },
@@ -73,6 +106,9 @@ void EmptyLinkFunctionForGeneratedCodeBoqueron() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron = { "MeshBoqueron", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABoqueron, MeshBoqueron), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABoqueron_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_PowerUp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_Disparador,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_Escudo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_MuroEspinas,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABoqueron_Statics::NewProp_MeshBoqueron,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABoqueron_Statics::InterfaceParams[] = {
@@ -105,7 +141,7 @@ void EmptyLinkFunctionForGeneratedCodeBoqueron() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABoqueron, 1814134836);
+	IMPLEMENT_CLASS(ABoqueron, 475320079);
 	template<> EXPERIMENTOS_API UClass* StaticClass<ABoqueron>()
 	{
 		return ABoqueron::StaticClass();

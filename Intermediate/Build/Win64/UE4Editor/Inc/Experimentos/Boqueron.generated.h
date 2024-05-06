@@ -61,7 +61,10 @@ public: \
 
 
 #define Experimentos_Source_Experimentos_Boqueron_h_13_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__PowerUp() { return STRUCT_OFFSET(ABoqueron, PowerUp); }
+	FORCEINLINE static uint32 __PPO__PowerUp() { return STRUCT_OFFSET(ABoqueron, PowerUp); } \
+	FORCEINLINE static uint32 __PPO__Disparador() { return STRUCT_OFFSET(ABoqueron, Disparador); } \
+	FORCEINLINE static uint32 __PPO__Escudo() { return STRUCT_OFFSET(ABoqueron, Escudo); } \
+	FORCEINLINE static uint32 __PPO__MuroEspinas() { return STRUCT_OFFSET(ABoqueron, MuroEspinas); }
 
 
 #define Experimentos_Source_Experimentos_Boqueron_h_10_PROLOG

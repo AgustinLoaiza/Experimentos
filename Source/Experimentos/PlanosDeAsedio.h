@@ -24,6 +24,7 @@ class EXPERIMENTOS_API IPlanosDeAsedio
 public:
 	virtual void SetPowerUp(FString PowerUp) = 0;
 	virtual void SetMesh(UStaticMeshComponent* MeshBoqueron) = 0;
-	virtual void SetFuncionEspecial() = 0;
-	virtual void SetEscudo() = 0;
+	virtual void SetFuncionEspecial(FString Disparador) = 0;
+	virtual void SetEscudo(FString Escudo) = 0;
+	virtual void SetMuroEspinas(FString MuroEspinas) = 0;
 };
