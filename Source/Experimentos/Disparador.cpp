@@ -9,7 +9,7 @@ ADisparador::ADisparador()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Torus.Shape_Torus'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
 	// Create the mesh component
 	MeshDisparador = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Disparador"));
 	MeshDisparador->SetStaticMesh(ShipMesh.Object);

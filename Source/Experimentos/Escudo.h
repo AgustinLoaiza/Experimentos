@@ -17,7 +17,7 @@ public:
 
 	UStaticMeshComponent* MeshEscudo;
 
-	int DurabilidadEscudo = 100;
+	int DurabilidadEscudo = 30;
 
 protected:
 	// Called when the game starts or when spawned

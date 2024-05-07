@@ -99,10 +99,10 @@ void ABoqueron::BuildPowerUp()
 			FVector ubicacionCentroMedico3 = UbicacionBoqueron+FVector(200.0f, 200.0f, 0.0f);
 			FVector ubicacionCentroMedico4 = UbicacionBoqueron+FVector(200.0f, -200.0f, 0.0f);
 			//Campo minado de componentes chinos
-			FVector ubicacionChino1 = UbicacionBoqueron + FVector(500.0f, 200.0f, 0.0f);
-			FVector ubicacionChino2 = UbicacionBoqueron + FVector(300.0f, 350.0f, 0.0f);
-			FVector ubicacionChino3 = UbicacionBoqueron + FVector(400.0f, -350.0f, 0.0f);
-			FVector ubicacionChino4 = UbicacionBoqueron + FVector(500.0f, -500.0f, 0.0f);
+			FVector ubicacionChino1 = UbicacionBoqueron + FVector(-500.0f, 200.0f, 0.0f);
+			FVector ubicacionChino2 = UbicacionBoqueron + FVector(-300.0f, 350.0f, 0.0f);
+			FVector ubicacionChino3 = UbicacionBoqueron + FVector(-400.0f, -350.0f, 0.0f);
+			FVector ubicacionChino4 = UbicacionBoqueron + FVector(-500.0f, -500.0f, 0.0f);
 			World->SpawnActor<ACentroMedico>(ubicacionCentroMedico1, FRotator::ZeroRotator);
 			World->SpawnActor<ACentroMedico>(ubicacionCentroMedico2, FRotator::ZeroRotator);
 			World->SpawnActor<ACentroMedico>(ubicacionCentroMedico3, FRotator::ZeroRotator);
@@ -204,8 +204,8 @@ void ABoqueron::BuildFuncionEspecial()
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			FVector ubicacionDisparador1 = UbicacionBoqueron + FVector(0.0f, 150.0f, 0.0f);
-			FVector ubicacionDisparador2 = UbicacionBoqueron + FVector(0.0f, -150.0f, 0.0f);
+			FVector ubicacionDisparador1 = UbicacionBoqueron + FVector(0.0f, 200.0f, 0.0f);
+			FVector ubicacionDisparador2 = UbicacionBoqueron + FVector(0.0f, -200.0f, 0.0f);
 			World->SpawnActor<ADisparador>(ubicacionDisparador1, FRotator::ZeroRotator);
 			World->SpawnActor<ADisparador>(ubicacionDisparador2, FRotator::ZeroRotator);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Disparador"));
@@ -259,13 +259,13 @@ void ABoqueron::BuildEscudo()
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			FVector ubicacionEscudo1 = UbicacionBoqueron + FVector(-100.0f, -300.0f, 0.0f);
-			FVector ubicacionEscudo2 = UbicacionBoqueron + FVector(-100.0f, -200.0f, 0.0f);
-			FVector ubicacionEscudo3 = UbicacionBoqueron + FVector(-100.0f, -100.0f, 0.0f);
-			FVector ubicacionEscudo4 = UbicacionBoqueron + FVector(-100.0f, 0.0f, 0.0f);
-			FVector ubicacionEscudo5 = UbicacionBoqueron + FVector(-100.0f, 100.0f, 0.0f);
-			FVector ubicacionEscudo6 = UbicacionBoqueron + FVector(-100.0f, 200.0f, 0.0f);
-			FVector ubicacionEscudo7 = UbicacionBoqueron + FVector(-100.0f, 300.0f, 0.0f);
+			FVector ubicacionEscudo1 = UbicacionBoqueron + FVector(-200.0f, -300.0f, 0.0f);
+			FVector ubicacionEscudo2 = UbicacionBoqueron + FVector(-200.0f, -200.0f, 0.0f);
+			FVector ubicacionEscudo3 = UbicacionBoqueron + FVector(-200.0f, -100.0f, 0.0f);
+			FVector ubicacionEscudo4 = UbicacionBoqueron + FVector(-200.0f, 0.0f, 0.0f);
+			FVector ubicacionEscudo5 = UbicacionBoqueron + FVector(-200.0f, 100.0f, 0.0f);
+			FVector ubicacionEscudo6 = UbicacionBoqueron + FVector(-200.0f, 200.0f, 0.0f);
+			FVector ubicacionEscudo7 = UbicacionBoqueron + FVector(-200.0f, 300.0f, 0.0f);
 			World->SpawnActor<AEscudo>(ubicacionEscudo1, FRotator::ZeroRotator); 
 			World->SpawnActor<AEscudo>(ubicacionEscudo2, FRotator::ZeroRotator); 
 			World->SpawnActor<AEscudo>(ubicacionEscudo3, FRotator::ZeroRotator); 
