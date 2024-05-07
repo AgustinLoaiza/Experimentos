@@ -26,8 +26,6 @@ void AExperimentosGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FVector UbicacionObjeto = FVector(1000.0f, 700.0f, 250.0f);
-
 	HansKundt = GetWorld()->SpawnActor<AHansKundt>(AHansKundt::StaticClass()); //StaticCalss quiere decir que esto es una clase de Unreal, si no hay no va a saber de donde esta sacando
 
 	/*Surtidor= GetWorld()->SpawnActor<ASurtidor>(ASurtidor::StaticClass());
@@ -58,10 +56,16 @@ void AExperimentosGameMode::BeginPlay()
 	HansKundt->SetObrero(Ingeniero);
 	HansKundt->ConstruirBoqueron(FVector(300.0f, 500.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
 
+	Medico= GetWorld()->SpawnActor<AMedico>(AMedico::StaticClass());
+	HansKundt->SetObrero(Medico);
+	HansKundt->ConstruirBoqueron(FVector(800.0f, -700.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
+
+	Artillero= GetWorld()->SpawnActor<AArtillero>(AArtillero::StaticClass());
+	HansKundt->SetObrero(Artillero);
+	HansKundt->ConstruirBoqueron(FVector(-800.0f, 1200.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
+
 	ABoqueron* Boqueron = HansKundt->GetBoqueron();
 	Boqueron->Caracteristicas();
-
-	AObjetoPrueba* Ojeto = GetWorld()->SpawnActor<AObjetoPrueba>(UbicacionObjeto, FRotator::ZeroRotator);
 
 }
 

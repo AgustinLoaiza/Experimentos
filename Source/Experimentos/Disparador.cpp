@@ -9,7 +9,7 @@ ADisparador::ADisparador()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Torus.Shape_Torus'"));
 	// Create the mesh component
 	MeshDisparador = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Disparador"));
 	MeshDisparador->SetStaticMesh(ShipMesh.Object);
@@ -20,7 +20,7 @@ ADisparador::ADisparador()
 
 	bCanFire = true;
 	GunOffset = FVector(90.f, 0.f, 0.f);
-	FireRate = 0.8f;
+	FireRate = 0.5f;
 }
 
 // Called when the game starts or when spawned
@@ -45,7 +45,6 @@ void ADisparador::Disparar(FVector FireDirection)
 				UWorld* const World = GetWorld();
 				if (World != nullptr)
 				{
-					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparo"));
 					// spawn the projectile
 					World->SpawnActor<AExperimentosProjectile>(SpawnLocation, FireRotation);
 
@@ -64,6 +63,15 @@ void ADisparador::Disparar(FVector FireDirection)
 void ADisparador::ShotTimerExpired()
 {
 		bCanFire = true;
+}
+
+void ADisparador::Dureza()
+{
+	vida -= 5;
+	if (vida <= 0)
+	{
+		Destroy();
+	}
 }
 
 // Called every frame

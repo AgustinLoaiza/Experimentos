@@ -38,6 +38,10 @@ public:
 	float contador2= 0.0f;
 	float contador3= 0.0f;
 
+	//Generacion de murallas
+	float espacios = 100.0f;
+	
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

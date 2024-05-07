@@ -325,7 +325,7 @@ void AExperimentosPawn::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Oth
 	AMuroEspinas* InventoryItemMuro = Cast<AMuroEspinas>(Other);
 	if (InventoryItemMuro != nullptr)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Vida: " + FString::FromInt(vida)));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia: " + FString::FromInt(energia)));
 		energia-=10;
 	}
 

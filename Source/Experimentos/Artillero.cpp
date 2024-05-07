@@ -43,11 +43,12 @@ void AArtillero::BuildMesh()
 void AArtillero::BuildPowerUps()
 {
 	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
-	Boqueron->SetPowerUp("Municion");
+	Boqueron->SetPowerUp("MunicionArma");
 }
 
 void AArtillero::FuncionEspecial()
 {
+	Boqueron->SetFuncionEspecial("MuchosDisparadores");
 }
 
 void AArtillero::BuildEscudo()
@@ -56,6 +57,8 @@ void AArtillero::BuildEscudo()
 
 void AArtillero::BuildMuroEspinas()
 {
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
+	Boqueron->SetMuroEspinas("MuroEspinas");
 }
 
 ABoqueron* AArtillero::GetBoqueron()

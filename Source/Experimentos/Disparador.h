@@ -29,6 +29,8 @@ protected:
 
 	float FireRate;
 
+	int vida = 150;
+
 	FTimerHandle TimerHandle_ShotTimerExpired;
 
 	void ShotTimerExpired();
@@ -37,4 +39,5 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void Dureza(); 
 };

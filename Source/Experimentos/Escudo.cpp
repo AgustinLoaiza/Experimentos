@@ -34,7 +34,7 @@ void AEscudo::Tick(float DeltaTime)
 
 void AEscudo::Durabilidad()
 {
-	DurabilidadEscudo -= 10;
+	DurabilidadEscudo -= 5;
 	if (DurabilidadEscudo <= 0)
 	{
 		Destroy();

@@ -51,10 +51,14 @@ void AMedico::FuncionEspecial()
 
 void AMedico::BuildEscudo()
 {
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Medico")); return; }
+	Boqueron->SetEscudo("MuchosEscudos");
 }
 
 void AMedico::BuildMuroEspinas()
 {
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Medico")); return; }
+	Boqueron->SetMuroEspinas("MuroEspinas");
 }
 
 ABoqueron* AMedico::GetBoqueron()

@@ -61,7 +61,7 @@ void AExperimentosProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherA
 	ADisparador* Disparador = Cast<ADisparador>(OtherActor);
 	if (Disparador != nullptr)
 	{
-		Disparador->Destroy();
+		Disparador->Dureza();
 	}
 	Destroy();
 }

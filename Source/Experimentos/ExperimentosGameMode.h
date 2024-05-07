@@ -6,8 +6,6 @@
 #include "GameFramework/GameModeBase.h"
 #include "ExperimentosGameMode.generated.h"
 
-class AOBjetoPrueba;
-
 UCLASS(MinimalAPI)
 class AExperimentosGameMode : public AGameModeBase
 {
@@ -18,7 +16,6 @@ public:
 
 private:
 
-	TArray<AActor*> ObjetosPrueba;
 	class ASurtidor* Surtidor;
 	class AMedico* Medico;
 	class AMecanico* Mecanico;
