@@ -54,6 +54,10 @@ void ASurtidor::BuildEscudo()
 {
 }
 
+void ASurtidor::BuildMuroEspinas()
+{
+}
+
 ABoqueron* ASurtidor::GetBoqueron()
 {
 	return Boqueron;

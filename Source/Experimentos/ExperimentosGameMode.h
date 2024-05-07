@@ -25,6 +25,7 @@ private:
 	class AArtillero* Artillero;
 	class AArmero* Armero;
 	class APirata* Pirata;
+	class AIngeniero* Ingeniero;
 	class AHansKundt* HansKundt;
 
 protected:

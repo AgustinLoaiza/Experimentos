@@ -47,17 +47,22 @@ void AIngeniero::BuildMesh()
 void AIngeniero::BuildPowerUps()
 {
 	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Ingeniero")); return; }
-	Boqueron->SetPowerUp("Motor");
-	Boqueron->SetPowerUp("Municion");
+	Boqueron->SetPowerUp("MotorMunicion");
 }
 
 void AIngeniero::FuncionEspecial()
 {
-	//Boqueron->SetFuncionEspecial("Disparador");
+	Boqueron->SetFuncionEspecial("Disparador");
 }
 
 void AIngeniero::BuildEscudo()
 {
+	Boqueron->SetEscudo("Escudo");
+}
+
+void AIngeniero::BuildMuroEspinas()
+{
+	Boqueron->SetMuroEspinas("MuroEspinas");
 }
 
 ABoqueron* AIngeniero::GetBoqueron()

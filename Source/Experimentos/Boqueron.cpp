@@ -27,18 +27,27 @@ ABoqueron::ABoqueron()
 void ABoqueron::BeginPlay()
 {
 	Super::BeginPlay();
+
+	
 }
 
 // Called every frame
 void ABoqueron::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
 	TiempoTranscurrido += DeltaTime;
 	if (TiempoTranscurrido>=5)
 	{
-		BuildPowerUp(); 
+		BuildPowerUp();
+		BuildEscudo(); 
+		BuildMuroEspinas(); 
+		BuildFuncionEspecial();
+		
 		TiempoTranscurrido = 0;
 	}
+	
+	 
 	UbicacionBoqueron = GetActorLocation();
 	
 }
@@ -131,6 +140,18 @@ void ABoqueron::BuildPowerUp()
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el ComponenteChino"));
 		}
 	}
+	else if (PowerUp=="MotorMunicion")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionMotor = UbicacionBoqueron + FVector(100.0f, 300.0f, 0.0f); 
+			FVector ubicacionMunicion = UbicacionBoqueron + FVector(100.0f, -300.0f, 0.0f);
+			World->SpawnActor<AMotor>(ubicacionMotor, FRotator::ZeroRotator); 
+			World->SpawnActor<AMunicion>(ubicacionMunicion, FRotator::ZeroRotator); 
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Motor y la Municion")); 
+		}
+	}
 	else
 	{
 		nullptr;
@@ -139,55 +160,73 @@ void ABoqueron::BuildPowerUp()
 
 void ABoqueron::BuildFuncionEspecial()
 {
+	if (contador1>=1)
+	{
+		return;
+	}
 	if (Disparador=="Disparador")
 	{
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			FVector ubicacionDisparador1 = UbicacionBoqueron + FVector(-300.0f, 300.0f, 0.0f);
-			FVector ubicacionDisparador2 = UbicacionBoqueron + FVector(-800.0f, 300.0f, 0.0f);
+			FVector ubicacionDisparador1 = UbicacionBoqueron + FVector(0.0f, 300.0f, 0.0f);
+			FVector ubicacionDisparador2 = UbicacionBoqueron + FVector(0.0f, -300.0f, 0.0f);
 			World->SpawnActor<ADisparador>(ubicacionDisparador1, FRotator::ZeroRotator);
 			World->SpawnActor<ADisparador>(ubicacionDisparador2, FRotator::ZeroRotator);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Disparador"));
 		}
-
+		
 	}
+	contador1++;
+
 }
 
 void ABoqueron::BuildEscudo()
 {
+	contador2= 0.0f;
+	if (contador2 >= 1)
+	{
+		return;
+	}
 	if (Escudo == "Escudo")
 	{
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			FVector ubicacionEscudo1 = UbicacionBoqueron + FVector(-500.0f, 300.0f, 0.0f);
-			FVector ubicacionEscudo2 = UbicacionBoqueron + FVector(-600.0f, 300.0f, 0.0f);
-			FVector ubicacionEscudo3 = UbicacionBoqueron + FVector(-700.0f, 300.0f, 0.0f);
+			FVector ubicacionEscudo1 = UbicacionBoqueron + FVector(-300.0f, -100.0f, 0.0f);
+			FVector ubicacionEscudo2 = UbicacionBoqueron + FVector(-300.0f, 0.0f, 0.0f);
+			FVector ubicacionEscudo3 = UbicacionBoqueron + FVector(-300.0f, 100.0f, 0.0f);
 			World->SpawnActor<AEscudo>(ubicacionEscudo1, FRotator::ZeroRotator);
 			World->SpawnActor<AEscudo>(ubicacionEscudo2, FRotator::ZeroRotator);
 			World->SpawnActor<AEscudo>(ubicacionEscudo3, FRotator::ZeroRotator);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Escudo"));
 		}
 	}
+	contador2++;
 }
 
 void ABoqueron::BuildMuroEspinas()
 {
+	contador3 = 0.0f;
+	if (contador3 >= 1)
+	{
+		return;
+	}
 	if (MuroEspinas == "MuroEspinas")
 	{
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			FVector ubicacionMuroEspinas1 = UbicacionBoqueron + FVector(900.0f, 300.0f, 0.0f);
-			FVector ubicacionMuroEspinas2 = UbicacionBoqueron + FVector(-1000.0f, 300.0f, 0.0f);
-			FVector ubicacionMuroEspinas3 = UbicacionBoqueron + FVector(-1100.0f, 300.0f, 0.0f);
+			FVector ubicacionMuroEspinas1 = UbicacionBoqueron + FVector(300.0f, -100.0f, 0.0f);
+			FVector ubicacionMuroEspinas2 = UbicacionBoqueron + FVector(300.0f, 0.0f, 0.0f);
+			FVector ubicacionMuroEspinas3 = UbicacionBoqueron + FVector(300.0f, 100.0f, 0.0f);
 			World->SpawnActor<AMuroEspinas>(ubicacionMuroEspinas1, FRotator::ZeroRotator);
 			World->SpawnActor<AMuroEspinas>(ubicacionMuroEspinas2, FRotator::ZeroRotator);
 			World->SpawnActor<AMuroEspinas>(ubicacionMuroEspinas3, FRotator::ZeroRotator);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo el Muro de Espinas"));
 		}
 	}
+	contador3++;
 }
 
 void ABoqueron::Caracteristicas()

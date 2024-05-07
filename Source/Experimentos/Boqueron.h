@@ -34,6 +34,10 @@ public:
 
 	float TiempoTranscurrido = 0.0f;
 
+	float contador1= 0.0f;
+	float contador2= 0.0f;
+	float contador3= 0.0f;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

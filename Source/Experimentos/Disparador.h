@@ -15,9 +15,23 @@ public:
 	// Sets default values for this actor's properties
 	ADisparador();
 
+	UStaticMeshComponent* MeshDisparador;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	void Disparar(FVector FireDirection);
+
+	uint32 bCanFire : 1;
+
+	FVector GunOffset;
+
+	float FireRate;
+
+	FTimerHandle TimerHandle_ShotTimerExpired;
+
+	void ShotTimerExpired();
 
 public:	
 	// Called every frame

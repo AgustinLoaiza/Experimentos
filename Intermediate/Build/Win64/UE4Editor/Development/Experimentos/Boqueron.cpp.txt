@@ -15,6 +15,12 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Municion.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Municion.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Armeria.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Armeria.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Disparador.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Disparador.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Escudo.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Escudo.generated.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\MuroEspinas.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\MuroEspinas.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ComponenteChino.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\FuncionChina.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\FuncionChina.generated.h

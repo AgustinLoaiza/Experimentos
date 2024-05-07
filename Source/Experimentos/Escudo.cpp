@@ -29,7 +29,7 @@ void AEscudo::BeginPlay()
 void AEscudo::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 }
 
 void AEscudo::Durabilidad()

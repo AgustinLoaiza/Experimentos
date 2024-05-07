@@ -8,8 +8,12 @@
 #include "Pirata.h"
 #include "Artillero.h"
 #include "Armero.h"
+#include "Ingeniero.h"
 #include "HansKundt.h"
 #include "Boqueron.h"
+#include "Escudo.h"
+#include "MuroEspinas.h"
+#include "Disparador.h"
 #include "ObjetoPrueba.h"
 
 AExperimentosGameMode::AExperimentosGameMode()
@@ -22,11 +26,11 @@ void AExperimentosGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FVector UbicacionObjeto = FVector(500.0f, 700.0f, 250.0f);
+	FVector UbicacionObjeto = FVector(1000.0f, 700.0f, 250.0f);
 
 	HansKundt = GetWorld()->SpawnActor<AHansKundt>(AHansKundt::StaticClass()); //StaticCalss quiere decir que esto es una clase de Unreal, si no hay no va a saber de donde esta sacando
 
-	Surtidor= GetWorld()->SpawnActor<ASurtidor>(ASurtidor::StaticClass());
+	/*Surtidor= GetWorld()->SpawnActor<ASurtidor>(ASurtidor::StaticClass());
 	HansKundt->SetObrero(Surtidor);
 	HansKundt->ConstruirBoqueron(FVector(1100.0f, 1300.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
 
@@ -48,8 +52,11 @@ void AExperimentosGameMode::BeginPlay()
 
 	Pirata= GetWorld()->SpawnActor<APirata>(APirata::StaticClass());
 	HansKundt->SetObrero(Pirata);
-	HansKundt->ConstruirBoqueron(FVector(-1600.0f, 800.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
+	HansKundt->ConstruirBoqueron(FVector(-1600.0f, 800.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));*/
 
+	Ingeniero= GetWorld()->SpawnActor<AIngeniero>(AIngeniero::StaticClass());
+	HansKundt->SetObrero(Ingeniero);
+	HansKundt->ConstruirBoqueron(FVector(300.0f, 500.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
 
 	ABoqueron* Boqueron = HansKundt->GetBoqueron();
 	Boqueron->Caracteristicas();

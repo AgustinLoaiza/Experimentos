@@ -54,6 +54,10 @@ void AArmero::BuildEscudo()
 {
 }
 
+void AArmero::BuildMuroEspinas()
+{
+}
+
 ABoqueron* AArmero::GetBoqueron()
 {
 	return Boqueron;

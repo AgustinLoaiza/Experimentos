@@ -6,6 +6,9 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Engine/StaticMesh.h"
+#include "Escudo.h"
+#include "Disparador.h"
+#include "ExperimentosPawn.h"
 
 AExperimentosProjectile::AExperimentosProjectile() 
 {
@@ -41,5 +44,24 @@ void AExperimentosProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherA
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());
 	}
 
+	AExperimentosPawn* Pawn = Cast<AExperimentosPawn>(OtherActor);
+	if (Pawn != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia: " + FString::FromInt(Pawn->energia)));
+		Pawn->energia-=10;
+	}
+
+	AEscudo* Escudo = Cast<AEscudo>(OtherActor);
+	if (Escudo != nullptr)
+	{
+		Escudo->Durabilidad();
+		
+	}
+
+	ADisparador* Disparador = Cast<ADisparador>(OtherActor);
+	if (Disparador != nullptr)
+	{
+		Disparador->Destroy();
+	}
 	Destroy();
 }

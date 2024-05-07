@@ -54,8 +54,13 @@ void AHansKundt::ConstruirBoqueron(FVector UbicacionBoqueron, FRotator Rotacion)
 		return;
 	}
 
-	Obrero->BuildBoqueron(UbicacionBoqueron, Rotacion);
+	Obrero->BuildBoqueron(UbicacionBoqueron, Rotacion); 
 	Obrero->BuildMesh(); 
 	Obrero->BuildPowerUps();
+	Obrero->BuildEscudo();
+	Obrero->FuncionEspecial();
+	Obrero->BuildMuroEspinas();
+	
+
 }
 

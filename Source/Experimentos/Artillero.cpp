@@ -54,6 +54,10 @@ void AArtillero::BuildEscudo()
 {
 }
 
+void AArtillero::BuildMuroEspinas()
+{
+}
+
 ABoqueron* AArtillero::GetBoqueron()
 {
 	return Boqueron;
