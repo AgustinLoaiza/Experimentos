@@ -14,11 +14,6 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Edit
 C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Editor/Inc/Experimentos/Artillero.gen.cpp
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos/Artillero.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Artillero.generated.h
-C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Editor/Inc/Experimentos/Boqueron.gen.cpp
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos/Boqueron.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\PlanosDeAsedio.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\PlanosDeAsedio.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Boqueron.generated.h
 C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Editor/Inc/Experimentos/CentroMedico.gen.cpp
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos/CentroMedico.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\CentroMedico.generated.h
@@ -54,7 +49,6 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Edit
 C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Editor/Inc/Experimentos/Escudo.gen.cpp
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos/Escudo.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Escudo.generated.h
-C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Editor/Inc/Experimentos/Experimentos.init.gen.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Editor/Inc/Experimentos/ExperimentosGameMode.gen.cpp
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos/ExperimentosGameMode.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
@@ -104,6 +98,8 @@ C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Edit
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos/Pirata.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Pirata.generated.h
 C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Editor/Inc/Experimentos/PlanosDeAsedio.gen.cpp
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos/PlanosDeAsedio.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\PlanosDeAsedio.generated.h
 C:/Users/User/Desktop/Experimentos/Experimentos/Intermediate/Build/Win64/UE4Editor/Inc/Experimentos/Surtidor.gen.cpp
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos/Surtidor.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Surtidor.generated.h

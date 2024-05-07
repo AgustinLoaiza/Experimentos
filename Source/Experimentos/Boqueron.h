@@ -26,6 +26,26 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
 	FString MuroEspinas;
 
+	/*UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	AArmeria* Armeria;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	ACentroMedico* CentroMedico;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	AComponenteChino* ComponenteChino;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	AMotor* Motor;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	AMunicion* Municion;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	AGasolinera* Gasolinera; 
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	ADisparador* Disparador;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	AEscudo* Escudo;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	AMuroEspinas* MuroEspinas;*/
+
+
 public:
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
 	UStaticMeshComponent* MeshBoqueron;
@@ -59,6 +79,16 @@ public:
 	void BuildFuncionEspecial();
 	void BuildEscudo();
 	void BuildMuroEspinas();
+
+	/*void SetMesh(UStaticMeshComponent* _MeshBoqueron);
+	void SetPowerUp(AGasolinera* _Gasolinera);
+	void SetFuncionEspecial(ADisparador* _Disparador);
+	void SetEscudo(AEscudo* _Escudo);
+	void SetMuroEspinas(AMuroEspinas* _MuroEspinas);
+	void BuildPowerUp();
+	void BuildFuncionEspecial();
+	void BuildEscudo();
+	void BuildMuroEspinas();*/
 
 	void Caracteristicas();
 

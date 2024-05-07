@@ -27,4 +27,10 @@ public:
 	virtual void SetFuncionEspecial(FString Disparador) = 0;
 	virtual void SetEscudo(FString Escudo) = 0;
 	virtual void SetMuroEspinas(FString MuroEspinas) = 0;
+
+	/*virtual void SetPowerUp(ASurtidor* Surtidor) = 0;
+	virtual void SetMesh(UStaticMeshComponent* MeshBoqueron) = 0;
+	virtual void SetFuncionEspecial(ADisparador* Disparador) = 0;
+	virtual void SetEscudo(AEscudo* Escudo) = 0;
+	virtual void SetMuroEspinas(AMuroEspinas* MuroEspinas) = 0;*/
 };

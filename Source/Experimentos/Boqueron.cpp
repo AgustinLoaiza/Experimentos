@@ -77,6 +77,27 @@ void ABoqueron::SetMuroEspinas(FString _MuroEspinas)
 	MuroEspinas = _MuroEspinas;
 }
 
+//void ABoqueron::SetPowerUp(AGasolinera* _Gasolinera)
+//{
+//	Gasolinera = _Gasolinera;
+//}
+//
+//void ABoqueron::SetFuncionEspecial(ADisparador* _Disparador)
+//{
+//	Disparador = _Disparador;
+//}
+//
+//void ABoqueron::SetEscudo(AEscudo* _Escudo)
+//{
+//	Escudo = _Escudo;
+//}
+//
+//void ABoqueron::SetMuroEspinas(AMuroEspinas* _MuroEspinas)
+//{
+//	MuroEspinas = _MuroEspinas;
+//}
+
+
 void ABoqueron::BuildPowerUp()
 {
 	if (PowerUp == "Gasolinera")
