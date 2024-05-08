@@ -56,7 +56,12 @@ void AHansKundt::ConstruirBoqueron(FVector UbicacionBoqueron, FRotator Rotacion)
 
 	Obrero->BuildBoqueron(UbicacionBoqueron, Rotacion); 
 	Obrero->BuildMesh(); 
-	Obrero->BuildPowerUps();
+	Obrero->BuildSurtidor();
+	Obrero->BuildMotor();
+	Obrero->BuildCentroMedico();
+	Obrero->BuildComponenteChino();
+	Obrero->BuildArmeria();
+	Obrero->BuildMunicion();
 	Obrero->BuildEscudo();
 	Obrero->FuncionEspecial();
 	Obrero->BuildMuroEspinas();

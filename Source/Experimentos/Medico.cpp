@@ -2,6 +2,7 @@
 
 
 #include "Medico.h"
+#include "Surtidor.h"
 #include "Boqueron.h"
 
 // Sets default values
@@ -39,10 +40,34 @@ void AMedico::BuildMesh()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void AMedico::BuildPowerUps()
+void AMedico::BuildSurtidor()
+{
+	/*if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Medico")); return; }
+	Boqueron->SetSurtidor("Surtidor");*/
+}
+
+void AMedico::BuildMotor()
+{
+}
+
+void AMedico::BuildMunicion()
+{
+}
+
+void AMedico::BuildCentroMedico()
 {
 	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Medico")); return; }
-	Boqueron->SetPowerUp("CentroMedico");
+	Boqueron->SetCentroMedico("CentroMedico"); 
+}
+
+void AMedico::BuildComponenteChino()
+{
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Pirata")); return; }
+	Boqueron->SetComponenteChino("MinasComponentesChinos"); 
+}
+
+void AMedico::BuildArmeria()
+{
 }
 
 void AMedico::FuncionEspecial()

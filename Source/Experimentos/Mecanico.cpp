@@ -41,10 +41,28 @@ void AMecanico::BuildMesh()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void AMecanico::BuildPowerUps()
+void AMecanico::BuildSurtidor()
 {
-	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Mecanico")); return; }
-	Boqueron->SetPowerUp("Motor");
+}
+
+void AMecanico::BuildMotor()
+{
+}
+
+void AMecanico::BuildMunicion()
+{
+}
+
+void AMecanico::BuildCentroMedico()
+{
+}
+
+void AMecanico::BuildComponenteChino()
+{
+}
+
+void AMecanico::BuildArmeria()
+{
 }
 
 void AMecanico::FuncionEspecial()

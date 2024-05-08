@@ -35,7 +35,7 @@ void AIngeniero::BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion)
 {
 	Boqueron = GetWorld()->SpawnActor<ABoqueron>(ABoqueron::StaticClass(), UbicacionBoqueron, Rotacion);
 	Boqueron->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
-	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Estancia():Lodging is NULL, make sure it's initialized.")); return; }
+	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Surtidor():Lodging is NULL, make sure it's initialized.")); return; }
 }
 
 void AIngeniero::BuildMesh()
@@ -44,10 +44,33 @@ void AIngeniero::BuildMesh()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void AIngeniero::BuildPowerUps()
+void AIngeniero::BuildSurtidor()
 {
-	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Ingeniero")); return; }
-	Boqueron->SetPowerUp("MotorMunicion");
+	Boqueron->SetSurtidor("SurtidorGasolina");
+}
+
+void AIngeniero::BuildMotor()
+{
+	Boqueron->SetMotor("MotorGrande");
+}
+
+void AIngeniero::BuildMunicion()
+{
+	//Boqueron->SetMunicion("Municion");
+}
+
+void AIngeniero::BuildCentroMedico()
+{
+	//Boqueron->SetCentroMedico("CentroMedico");
+}
+void AIngeniero::BuildComponenteChino()
+{
+	//Boqueron->SetComponenteChino("ComponenteChino");
+}
+
+void AIngeniero::BuildArmeria()
+{
+	//Boqueron->SetArmeria("Armeria");
 }
 
 void AIngeniero::FuncionEspecial()
@@ -69,4 +92,6 @@ ABoqueron* AIngeniero::GetBoqueron()
 {
 	return Boqueron;
 }
+
+
 

@@ -40,10 +40,28 @@ void APirata::BuildMesh()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void APirata::BuildPowerUps()
+void APirata::BuildSurtidor()
 {
-	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Pirata")); return; }
-	Boqueron->SetPowerUp("ComponenteChino");
+}
+
+void APirata::BuildMotor()
+{
+}
+
+void APirata::BuildMunicion()
+{
+}
+
+void APirata::BuildCentroMedico()
+{
+}
+
+void APirata::BuildComponenteChino()
+{
+}
+
+void APirata::BuildArmeria()
+{
 }
 
 void APirata::FuncionEspecial()

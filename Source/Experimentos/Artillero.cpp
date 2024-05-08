@@ -40,10 +40,40 @@ void AArtillero::BuildMesh()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void AArtillero::BuildPowerUps()
+void AArtillero::BuildSurtidor()
+{
+	/*if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
+	Boqueron->SetSurtidor("Surtidor");*/
+}
+
+void AArtillero::BuildMotor()
+{
+	/*if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
+	Boqueron->SetMotor("Motor");*/
+}
+
+void AArtillero::BuildMunicion()
+{
+	/*if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
+	Boqueron->SetMunicion("Municion");*/
+}
+
+void AArtillero::BuildCentroMedico()
+{
+	//if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
+	//Boqueron->SetCentroMedico("CentroMedico");
+}
+
+void AArtillero::BuildComponenteChino()
+{
+	//if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
+	//Boqueron->SetComponenteChino("ComponenteChino");
+}
+
+void AArtillero::BuildArmeria()
 {
 	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
-	Boqueron->SetPowerUp("MunicionArma");
+	Boqueron->SetArmeria("Armeria");
 }
 
 void AArtillero::FuncionEspecial()
@@ -53,6 +83,8 @@ void AArtillero::FuncionEspecial()
 
 void AArtillero::BuildEscudo()
 {
+	//if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Artillero")); return; }
+	//Boqueron->SetEscudo("Escudo");
 }
 
 void AArtillero::BuildMuroEspinas()

@@ -40,10 +40,28 @@ void ASurtidor::BuildMesh()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void ASurtidor::BuildPowerUps()
+void ASurtidor::BuildSurtidor()
 {
-	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Surtidor")); return; }
-	Boqueron->SetPowerUp("Gasolinera");
+}
+
+void ASurtidor::BuildMotor()
+{
+}
+
+void ASurtidor::BuildMunicion()
+{
+}
+
+void ASurtidor::BuildCentroMedico()
+{
+}
+
+void ASurtidor::BuildComponenteChino()
+{
+}
+
+void ASurtidor::BuildArmeria()
+{
 }
 
 void ASurtidor::FuncionEspecial()

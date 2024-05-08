@@ -44,18 +44,6 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Edit
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Disparador.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Disparador.generated.h
 C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ExperimentosPawn.generated.h
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Armero.cpp
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Armero.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Obrero.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Obrero.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Armero.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Boqueron.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\PlanosDeAsedio.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\PlanosDeAsedio.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Boqueron.generated.h
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Artillero.cpp
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Artillero.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Artillero.generated.h
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/CentroMedico.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/ComponenteArmeria.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/ComponenteChino.cpp
@@ -69,25 +57,6 @@ C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Edit
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Escudo.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Experimentos.cpp
 C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Experimentos.h
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/ExperimentosGameMode.cpp
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\ExperimentosGameMode.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\ExperimentosGameMode.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Surtidor.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Surtidor.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Medico.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Medico.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Mecanico.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Mecanico.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Pirata.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Pirata.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Ingeniero.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Ingeniero.generated.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\HansKundt.h
-C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\HansKundt.generated.h
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/ExperimentosPawn.cpp
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
@@ -109,16 +78,13 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/FuncionChina.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Gasolinera.cpp
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/HansKundt.cpp
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Ingeniero.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/MagiaChina.cpp
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Mecanico.cpp
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Medico.cpp
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Motor.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Municion.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/MuroEspinas.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/ObjetoPrueba.cpp
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Obrero.cpp
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Pirata.cpp
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\Obrero.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\Obrero.generated.h
 C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/PlanosDeAsedio.cpp
-C:/Users/User/Desktop/Experimentos/Experimentos/Source/Experimentos/Surtidor.cpp
+C:\Users\User\Desktop\Experimentos\Experimentos\Source\Experimentos\PlanosDeAsedio.h
+C:\Users\User\Desktop\Experimentos\Experimentos\Intermediate\Build\Win64\UE4Editor\Inc\Experimentos\PlanosDeAsedio.generated.h

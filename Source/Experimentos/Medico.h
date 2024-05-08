@@ -26,7 +26,12 @@ public:
 
 	virtual void BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion) override;
 	virtual void BuildMesh() override;
-	virtual void BuildPowerUps() override;
+	virtual void BuildSurtidor() override;
+	virtual void BuildMotor() override;
+	virtual void BuildMunicion() override;
+	virtual void BuildCentroMedico() override;
+	virtual void BuildComponenteChino() override;
+	virtual void BuildArmeria() override;
 	virtual void FuncionEspecial() override;
 	virtual void BuildEscudo() override;
 	virtual void BuildMuroEspinas() override;

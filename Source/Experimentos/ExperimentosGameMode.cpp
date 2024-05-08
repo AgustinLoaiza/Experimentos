@@ -56,11 +56,11 @@ void AExperimentosGameMode::BeginPlay()
 	HansKundt->SetObrero(Ingeniero);
 	HansKundt->ConstruirBoqueron(FVector(300.0f, 500.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
 
-	Medico= GetWorld()->SpawnActor<AMedico>(AMedico::StaticClass());
+	Medico= GetWorld()->SpawnActor<AMedico>(AMedico::StaticClass()); 
 	HansKundt->SetObrero(Medico);
 	HansKundt->ConstruirBoqueron(FVector(800.0f, -700.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
 
-	Artillero= GetWorld()->SpawnActor<AArtillero>(AArtillero::StaticClass());
+	Artillero= GetWorld()->SpawnActor<AArtillero>(AArtillero::StaticClass()); 
 	HansKundt->SetObrero(Artillero);
 	HansKundt->ConstruirBoqueron(FVector(-800.0f, 1200.0f, 215.0f), FRotator(0.0f, 180.0f, 90.0f));
 

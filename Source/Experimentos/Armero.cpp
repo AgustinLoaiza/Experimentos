@@ -40,10 +40,28 @@ void AArmero::BuildMesh()
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("MallaBoqueron"));
 }
 
-void AArmero::BuildPowerUps()
+void AArmero::BuildSurtidor()
 {
-	if (!Boqueron) { UE_LOG(LogTemp, Error, TEXT("Debes contratar a un Armero")); return; }
-	Boqueron->SetPowerUp("Armeria");
+}
+
+void AArmero::BuildMotor()
+{
+}
+
+void AArmero::BuildMunicion()
+{
+}
+
+void AArmero::BuildCentroMedico()
+{
+}
+
+void AArmero::BuildComponenteChino()
+{
+}
+
+void AArmero::BuildArmeria()
+{
 }
 
 void AArmero::FuncionEspecial()

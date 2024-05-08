@@ -24,7 +24,12 @@ class EXPERIMENTOS_API IObrero
 public:
 	virtual void BuildBoqueron(FVector UbicacionBoqueron, FRotator Rotacion) = 0; 
 	virtual void BuildMesh() = 0;
-	virtual void BuildPowerUps() = 0;
+	virtual void BuildSurtidor() = 0;
+	virtual void BuildMotor() = 0;
+	virtual void BuildMunicion() = 0;
+	virtual void BuildCentroMedico() = 0;
+	virtual void BuildComponenteChino() = 0;
+	virtual void BuildArmeria() = 0;
 	virtual void FuncionEspecial() = 0;
 	virtual void BuildEscudo() = 0;
 	virtual void BuildMuroEspinas() = 0;

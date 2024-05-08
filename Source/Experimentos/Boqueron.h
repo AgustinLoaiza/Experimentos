@@ -18,7 +18,17 @@ public:
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	FString PowerUp;
+	FString Surtidor;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	FString Motor;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	FString Municion;  
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron") 
+	FString CentroMedico; 
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron") 
+	FString ComponenteChino;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron") 
+	FString Armeria; 
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
 	FString Disparador;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
@@ -26,24 +36,24 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
 	FString MuroEspinas;
 
-	/*UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	AArmeria* Armeria;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	ACentroMedico* CentroMedico;
+	class AArmeria* newArmeria;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	AComponenteChino* ComponenteChino;
+	class ACentroMedico* newCentroMedico;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	AMotor* Motor;
+	class AComponenteChino* newComponenteChino;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	AMunicion* Municion;
+	class AMotor* newMotor;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	AGasolinera* Gasolinera; 
+	class AMunicion* newMunicion;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	ADisparador* Disparador;
+	class AGasolinera* newGasolinera;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	AEscudo* Escudo;
+	class ADisparador* newDisparador;
 	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
-	AMuroEspinas* MuroEspinas;*/
+	class AEscudo* newEscudo;
+	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	class AMuroEspinas* newMuroEspinas;
 
 
 public:
@@ -70,26 +80,28 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void SetMesh(UStaticMeshComponent* _MeshBoqueron);
-	void SetPowerUp(FString _PowerUp);
+	void SetMesh(UStaticMeshComponent* _MeshBoqueron) override;
+	void SetSurtidor(FString _Surtidor) override;
+	void SetMotor(FString _Motor) override;
+	void SetMunicion(FString _Municion) override;
+	void SetCentroMedico(FString _CentroMedico) override;
+	void SetComponenteChino(FString _ComponenteChino) override;
+	void SetArmeria(FString _Armeria) override;  
 	void SetFuncionEspecial(FString _Disparador);
 	void SetEscudo(FString _Escudo);
 	void SetMuroEspinas(FString _MuroEspinas);
-	void BuildPowerUp();
+	void BuildMotor();
+	void BuildMunicion();
+	void BuildCentroMedico();
+	void BuildComponenteChino();
+	void BuildArmeria();
+	void BuildGasolinera();
 	void BuildFuncionEspecial();
 	void BuildEscudo();
 	void BuildMuroEspinas();
 
-	/*void SetMesh(UStaticMeshComponent* _MeshBoqueron);
-	void SetPowerUp(AGasolinera* _Gasolinera);
-	void SetFuncionEspecial(ADisparador* _Disparador);
-	void SetEscudo(AEscudo* _Escudo);
-	void SetMuroEspinas(AMuroEspinas* _MuroEspinas);
-	void BuildPowerUp();
-	void BuildFuncionEspecial();
-	void BuildEscudo();
-	void BuildMuroEspinas();*/
+	void Caracteristicas(); 
 
-	void Caracteristicas();
 
+	
 };

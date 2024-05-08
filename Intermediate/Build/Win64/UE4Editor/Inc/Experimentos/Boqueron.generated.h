@@ -61,10 +61,24 @@ public: \
 
 
 #define Experimentos_Source_Experimentos_Boqueron_h_13_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__PowerUp() { return STRUCT_OFFSET(ABoqueron, PowerUp); } \
+	FORCEINLINE static uint32 __PPO__Surtidor() { return STRUCT_OFFSET(ABoqueron, Surtidor); } \
+	FORCEINLINE static uint32 __PPO__Motor() { return STRUCT_OFFSET(ABoqueron, Motor); } \
+	FORCEINLINE static uint32 __PPO__Municion() { return STRUCT_OFFSET(ABoqueron, Municion); } \
+	FORCEINLINE static uint32 __PPO__CentroMedico() { return STRUCT_OFFSET(ABoqueron, CentroMedico); } \
+	FORCEINLINE static uint32 __PPO__ComponenteChino() { return STRUCT_OFFSET(ABoqueron, ComponenteChino); } \
+	FORCEINLINE static uint32 __PPO__Armeria() { return STRUCT_OFFSET(ABoqueron, Armeria); } \
 	FORCEINLINE static uint32 __PPO__Disparador() { return STRUCT_OFFSET(ABoqueron, Disparador); } \
 	FORCEINLINE static uint32 __PPO__Escudo() { return STRUCT_OFFSET(ABoqueron, Escudo); } \
-	FORCEINLINE static uint32 __PPO__MuroEspinas() { return STRUCT_OFFSET(ABoqueron, MuroEspinas); }
+	FORCEINLINE static uint32 __PPO__MuroEspinas() { return STRUCT_OFFSET(ABoqueron, MuroEspinas); } \
+	FORCEINLINE static uint32 __PPO__newArmeria() { return STRUCT_OFFSET(ABoqueron, newArmeria); } \
+	FORCEINLINE static uint32 __PPO__newCentroMedico() { return STRUCT_OFFSET(ABoqueron, newCentroMedico); } \
+	FORCEINLINE static uint32 __PPO__newComponenteChino() { return STRUCT_OFFSET(ABoqueron, newComponenteChino); } \
+	FORCEINLINE static uint32 __PPO__newMotor() { return STRUCT_OFFSET(ABoqueron, newMotor); } \
+	FORCEINLINE static uint32 __PPO__newMunicion() { return STRUCT_OFFSET(ABoqueron, newMunicion); } \
+	FORCEINLINE static uint32 __PPO__newGasolinera() { return STRUCT_OFFSET(ABoqueron, newGasolinera); } \
+	FORCEINLINE static uint32 __PPO__newDisparador() { return STRUCT_OFFSET(ABoqueron, newDisparador); } \
+	FORCEINLINE static uint32 __PPO__newEscudo() { return STRUCT_OFFSET(ABoqueron, newEscudo); } \
+	FORCEINLINE static uint32 __PPO__newMuroEspinas() { return STRUCT_OFFSET(ABoqueron, newMuroEspinas); }
 
 
 #define Experimentos_Source_Experimentos_Boqueron_h_10_PROLOG

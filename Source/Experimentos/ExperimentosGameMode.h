@@ -16,12 +16,12 @@ public:
 
 private:
 
-	class ASurtidor* Surtidor;
+	//class ASurtidor* Surtidor; 
+	//class AMecanico* Mecanico;
+	//class AArmero* Armero;
+	//class APirata* Pirata;
 	class AMedico* Medico;
-	class AMecanico* Mecanico;
-	class AArtillero* Artillero;
-	class AArmero* Armero;
-	class APirata* Pirata;
+	class AArtillero* Artillero;  
 	class AIngeniero* Ingeniero;
 	class AHansKundt* HansKundt;
 
